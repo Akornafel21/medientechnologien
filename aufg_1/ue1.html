@@ -68,7 +68,7 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
         Datei geschrieben werden. Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz)
         ein und bestimme aus den resultierenden Zahlenfolgen in der ASCII-Datei die Frequenz der Sinus-
         Schwingungen. Begründe!</p>
-        <!--einfügen sine dateien-->
+        <!--einfügen sine dateien und die zahlenwerte von eclipse-->
 <audio controls><source src="rauschen.wav" type="audio/wav"></audio>
 <audio controls><source src="rauschen.wav" type="audio/wav"></audio>
 <p><!--Loesung--></p>
@@ -77,12 +77,26 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 <p>Bei der zeitlichen Diskretisierung eines Analogsignals muss das sogenannte Abtasttheorem
         eingehalten werden. Wie lautet es und wie lässt sich der Grenzfall, für den es gerade noch gilt,
         illustrieren? Erstelle hierzu eine Zeichnung und erläutere.</p>
-<p><!--Loesung--></p>
+<p>fa​≥2⋅fmax​
+</br>- Fa à Abtastfrequenz
+</br> - Fmax à maximale Frequenzkomponente des zu abtastenden Signals
+</br> Definition: Das Abtasttheorem besagt, dass die Abtastfrequenz mindestens doppelt so hoch sein muss wie die höchste im Signal vorkommende Frequenz, um das Signal korrekt zu rekonstruieren.
+</br>Wird das Signal mit einer geringeren Frequenz als dem Doppelten der maximalen Frequenz abgetastet, tritt der Effekt des Aliasings auf, bei den Frequenzen falsch dargestellt werden und somit Informationen verloren gehen       
+</br><img src="bilder/Ue1Aufg2c.jpg" height="150" alt="Bild kann nicht geladen werden.">
+</br>- Zwei Punkte pro Periode
+</br>- Abtastpunkte liegen auf den Extremen der Kurve (Maximum, Minimum)</p>
 
 <br><h3>Aufgabe 2 d.</h3>
 <p>Bei herkömmlichen Soundkarten tritt systembedingt kein Aliasing auf, weil das Audiosignal stets
         geeignet vorbehandelt wird. Wie sieht diese Vorbehandlung aus?</p>
-<p><!--Loesung--></p>
+<p>Um Aliasing zu verhindern, wird das Audiosignal einem Tiefpassfilter unterzogen, bevor es digitalisiert wird. 
+</br>Dieser Tiefpassfilter/   Anti-Aliasing-Filter, entfernt Frequenzen, die über der Nyquist-Frequenz liegen (halbe Abtastrate). 
+</br>Indem hohen Frequenzen entfernt werden, wird verhindert, dass sie während der Digitalisierung als niedrigere, unerwünschte Frequenzen erscheinen und somit das Signal verfälschen
+</br>- Tiefpassfilter/ Anti- Aliasing- Filter à
+</br> o Für Datenerfassungssysteme erforderlich
+</br> o Sicherstellung, dass alle abgetasteten Signale genau rekonstruiert werden können
+</br> o Filtereigenschaften à Bandbreite, Amplitudenauflösung, Abtastrate
+</br> - Nyquist- Frequenz à halbe Abtastfrequenz/rate</p>
 
 <br><h3>Aufgabe 2 e.</h3>
 <p>Mit einem kleinen Trick lässt sich Aliasing jedoch nachweisen. Diese auch als Down-Sampling
