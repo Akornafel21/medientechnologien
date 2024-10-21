@@ -17,8 +17,10 @@
          folgenden.</p>
 </iframe>
 
-<h2>Uebung 1</h2>
-<br><h3>Aufgabe 1 a.</h3>
+<h1>Uebung 1</h1>
+
+<h2>Aufgabe 1 – Audiodateien erzeugen und einlesen</h2>
+<h3>Aufgabe 1 a.</h3>
 <p>Schneide aus den dir zugeschickten Audio-Files ab dem Zeitpunkt jeweils ein Stück mit der Länge 5
 Sekunden und speichere dieses als WAV-Datei ab. Parameter für Musik: fa=44,1 kHz, stereo, für
 Sprache: fa=8 kHz mono, beide 16 bit Auflösung. Beim Schneiden achtest du darauf, dass der
@@ -37,6 +39,7 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
         <img src="bilder/sprache_header.jpeg" height="150" alt="Bild kann nicht geladen werden.">
          <!--bei dem bild2 (sprache) stimmt was nicht, die sprache sollte nur 1 channel haben kannst du das
                  nochmal überprüfen? -->
+                 <!--musst noch die sine datei in ordner machen -->
 </p>
 <p><b>Channels:</b> sind die Kanäle, bei Sprache ist es 1 Kanal(mono)
 </br> und bei Musik sind es 2 Kanäle(stereo)
@@ -57,20 +60,17 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 </br>Berechnung für die Sprach-Datei
 </br> Bitrate = 16000 * 16 * 1 = 256.000 bits/s  <!--verstehe die lösung von den andern nicht, dachte so weil nur 1 Kanal -->
 </p>
-
-<br><h3>Aufgabe 2 a.</h3>
+<br>
+<h2>Aufgabe 2 – Aliasing</h2>
+<h3>Aufgabe 2 a und b</h3>
 <br><p>Rauschen</p>
 <p>Modifiziere wave_io dahingehend, dass die Samples in der WAV-Datei in eine (lesbare) ASCII-
         Datei geschrieben werden. Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz)
         ein und bestimme aus den resultierenden Zahlenfolgen in der ASCII-Datei die Frequenz der Sinus-
         Schwingungen. Begründe!</p>
+        <!--einfügen sine dateien-->
 <audio controls><source src="rauschen.wav" type="audio/wav"></audio>
 <audio controls><source src="rauschen.wav" type="audio/wav"></audio>
-<p><!--Loesung--></p>
-
-<br><h3>Aufgabe 2 b.</h3>
-<p>Überprüfe deine Schätzung mit dem Programm PRAAT. (Vorgehensweise: Read file..., To
-        Spectrum..., Edit)</p>
 <p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 c.</h3>
