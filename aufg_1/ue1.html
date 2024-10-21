@@ -24,37 +24,38 @@ Sekunden und speichere dieses als WAV-Datei ab. Parameter für Musik: fa=44,1 kH
 Sprache: fa=8 kHz mono, beide 16 bit Auflösung. Beim Schneiden achtest du darauf, dass der
 Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 <p>Musikaufnahme</p>
-                <!--audio datei einfügen -->
 <audio controls><source src="audio/musik_Bytewave.wav" type="audio/wav"></audio>
 <audio controls><source src="audio/Sprache_Bytewave.wav" type="audio/wav"></audio>
 <br><h3>Aufgabe 1 b.</h3>
 <p>Erkläre, warum die Audio-Files unterschiedliche Abtastfrequenzen haben</p>
         <!--Füge bei p die Lösung ein die wir schon erarbeitet hatten -->
 <p>Loesung</p>
-        
-<br><h3>Aufgabe 1 b.</h3>
-<p>Lies die Musik- und die Sprachdatei mit wave_io ein und erkläre die Angaben im Header</p>
-<p>Loesung</p>
 
 <br><h3>Aufgabe 1 c.</h3>
 <p>Lies die Musik- und die Sprachdatei mit wave_io ein und erkläre die Angaben im Header</p>
-<table>
-        <tr>
-            <td><img src="bilder/musik_header.jpeg" height="150" alt="Bild kann nicht geladen werden."></td>
-            <td>Erklärungstext</td>
-        </tr>
-        <tr>
-                 <!--bei dem bild stimmt was nicht, die sprache sollte nur 1 channel haben kannst du das
+<p><img src="bilder/musik_header.jpeg" height="150" alt="Bild kann nicht geladen werden.">
+        <img src="bilder/sprache_header.jpeg" height="150" alt="Bild kann nicht geladen werden.">
+         <!--bei dem bild2 (sprache) stimmt was nicht, die sprache sollte nur 1 channel haben kannst du das
                  nochmal überprüfen? -->
-            <td><img src="bilder/sprache_header.jpeg" height="150" alt="Bild kann nicht geladen werden."></td>
-            <td>Erklärungstext</td>
-        </tr>
-    </table>
+</p>
+<p><b>Channels:</b> sind die Kanäle, bei Sprache ist es 1 Kanal(mono)
+</br> und bei Musik sind es 2 Kanäle(stereo)
+</br><b>Frames:</b> enthalten die Samples für alle Kanäle
+</br><b>Sample Rate:</b> Abtastrate / Abtastfrequenz, sagt wie oft pro Sekunde das Audiosignal gemessen wird.
+</br><b>Valid Bits:</b> ist die Auflösung 
+</br><b>Bytes per Sample:</b> Anzahl der Bytes pro Sample zeigt, wie viel Speicherplatz eine einzelne Messung braucht
+</p> 
+                
+       
 
         
 <br><h3>Aufgabe 1 d.</h3>
 <p>Berechne die Bitrate für die beiden Dateien</p>
-<p>Loesung</p>
+<p>Berechnung für die Musik-Datei
+</br>
+</br>Berechnung für die Sprach-Datei
+</br>
+</p>
 
 <br><h3>Aufgabe 2 a.</h3>
 <br><p>Rauschen</p>
