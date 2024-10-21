@@ -21,17 +21,17 @@
 
 <h2>Aufgabe 1 – Audiodateien erzeugen und einlesen</h2>
 <h3>Aufgabe 1 a.</h3>
-<p>Schneide aus den dir zugeschickten Audio-Files ab dem Zeitpunkt jeweils ein Stück mit der Länge 5
-Sekunden und speichere dieses als WAV-Datei ab. Parameter für Musik: fa=44,1 kHz, stereo, für
-Sprache: fa=8 kHz mono, beide 16 bit Auflösung. Beim Schneiden achtest du darauf, dass der
-Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
+<p>Schneide aus den dir zugeschickten Audio-Files ab dem Zeitpunkt jeweils ein Stück mit der Länge 5 Sekunden und speichere        
+</br>dieses als WAV-Datei ab. Parameter für Musik: fa=44,1 kHz, stereo, für Sprache: fa=8 kHz mono, beide 16 bit Auflösung. 
+</br>Beim Schneiden achtest du darauf, dass der Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 <p>Musikaufnahme</p>
 <audio controls><source src="audio/musik_Bytewave.wav" type="audio/wav"></audio>
 <audio controls><source src="audio/Sprache_Bytewave.wav" type="audio/wav"></audio>
 <br><h3>Aufgabe 1 b.</h3>
 <p>Erkläre, warum die Audio-Files unterschiedliche Abtastfrequenzen haben</p>
-        <!--Füge bei p die Lösung ein die wir schon erarbeitet hatten -->
-<p>Loesung</p>
+<p>Die Abtastfrequenz für die Musik-Datei ist 44,1 kHZ, währenddessen die Sprach-Datei 8kHZ beträgt. 
+</br>Das hat den Grund, das die wesentlichen Aspekte von Stimmen eine deutlich niedrigere Requenz benötigt, um erfasst zu werden
+</p>
 
 <br><h3>Aufgabe 1 c.</h3>
 <p>Lies die Musik- und die Sprachdatei mit wave_io ein und erkläre die Angaben im Header</p>
@@ -65,8 +65,8 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 <h3>Aufgabe 2 a und b</h3>
 <br><p>Rauschen</p>
 <p>Modifiziere wave_io dahingehend, dass die Samples in der WAV-Datei in eine (lesbare) ASCII-
-        Datei geschrieben werden. Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz)
-        ein und bestimme aus den resultierenden Zahlenfolgen in der ASCII-Datei die Frequenz der Sinus-
+        Datei geschrieben werden. </br>Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz)
+        ein und bestimme aus den resultierenden Zahlenfolgen </br>in der ASCII-Datei die Frequenz der Sinus-
         Schwingungen. Begründe!</p>
         <!--einfügen sine dateien und die zahlenwerte von eclipse-->
 <audio controls><source src="rauschen.wav" type="audio/wav"></audio>
@@ -75,23 +75,26 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 
 <br><h3>Aufgabe 2 c.</h3>
 <p>Bei der zeitlichen Diskretisierung eines Analogsignals muss das sogenannte Abtasttheorem
-        eingehalten werden. Wie lautet es und wie lässt sich der Grenzfall, für den es gerade noch gilt,
-        illustrieren? Erstelle hierzu eine Zeichnung und erläutere.</p>
-<p>fa​≥2⋅fmax​
+        eingehalten werden. </br>Wie lautet es und wie lässt sich der Grenzfall, für den es gerade noch gilt,
+        illustrieren? </br>Erstelle hierzu eine Zeichnung und erläutere.</p>
+<p><b>fa​≥2⋅fmax​</b>
 </br>- Fa à Abtastfrequenz
 </br> - Fmax à maximale Frequenzkomponente des zu abtastenden Signals
-</br> Definition: Das Abtasttheorem besagt, dass die Abtastfrequenz mindestens doppelt so hoch sein muss wie die höchste im Signal vorkommende Frequenz, um das Signal korrekt zu rekonstruieren.
-</br>Wird das Signal mit einer geringeren Frequenz als dem Doppelten der maximalen Frequenz abgetastet, tritt der Effekt des Aliasings auf, bei den Frequenzen falsch dargestellt werden und somit Informationen verloren gehen       
+</br> <b>Definition:</b> Das Abtasttheorem besagt, dass die Abtastfrequenz mindestens doppelt so hoch sein muss wie die 
+</br>höchste im Signal vorkommende Frequenz, um das Signal korrekt zu rekonstruieren.
+</br>Wird das Signal mit einer geringeren Frequenz als dem Doppelten der maximalen Frequenz abgetastet,
+</br> tritt der Effekt des Aliasings auf, bei den Frequenzen falsch dargestellt werden und somit Informationen verloren gehen       
 </br><img src="bilder/Ue1Aufg2c.jpg" height="150" alt="Bild kann nicht geladen werden.">
 </br>- Zwei Punkte pro Periode
 </br>- Abtastpunkte liegen auf den Extremen der Kurve (Maximum, Minimum)</p>
 
 <br><h3>Aufgabe 2 d.</h3>
-<p>Bei herkömmlichen Soundkarten tritt systembedingt kein Aliasing auf, weil das Audiosignal stets
+<p>Bei herkömmlichen Soundkarten tritt systembedingt kein Aliasing auf, weil das Audiosignal stets</br>
         geeignet vorbehandelt wird. Wie sieht diese Vorbehandlung aus?</p>
 <p>Um Aliasing zu verhindern, wird das Audiosignal einem Tiefpassfilter unterzogen, bevor es digitalisiert wird. 
 </br>Dieser Tiefpassfilter/   Anti-Aliasing-Filter, entfernt Frequenzen, die über der Nyquist-Frequenz liegen (halbe Abtastrate). 
-</br>Indem hohen Frequenzen entfernt werden, wird verhindert, dass sie während der Digitalisierung als niedrigere, unerwünschte Frequenzen erscheinen und somit das Signal verfälschen
+</br>Indem hohen Frequenzen entfernt werden, wird verhindert, dass sie während der Digitalisierung als niedrigere,
+</br> unerwünschte Frequenzen erscheinen und somit das Signal verfälschen
 </br>- Tiefpassfilter/ Anti- Aliasing- Filter à
 </br> o Für Datenerfassungssysteme erforderlich
 </br> o Sicherstellung, dass alle abgetasteten Signale genau rekonstruiert werden können
@@ -100,27 +103,27 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 
 <br><h3>Aufgabe 2 e.</h3>
 <p>Mit einem kleinen Trick lässt sich Aliasing jedoch nachweisen. Diese auch als Down-Sampling
-        bekannte Methode besteht darin, dass man bei einer WAV-Datei z.B. jeden zweiten Abtastwert
-        wegwirft. Man erhält so eine Wellenform, die genau die Hälfte der ursprünglichen Abtastfrequenz
-        aufweist. Wenn man das Signal nicht vorher bandbegrenzt hat, können Aliasing-Verzerrungen
-        hörbar werden. Modifiziere wave_io dahingehend, dass vom eingelesenen Audiosignal jeder zweite Abtastwert
-        verworfen wird und das resultierende Signal abgespeichert wird. Der Header muss natürlich
+        bekannte Methode besteht darin, </br>dass man bei einer WAV-Datei z.B. jeden zweiten Abtastwert
+        wegwirft.</br> Man erhält so eine Wellenform, die genau die Hälfte der ursprünglichen Abtastfrequenz
+        aufweist.</br> Wenn man das Signal nicht vorher bandbegrenzt hat, können Aliasing-Verzerrungen
+        hörbar werden.</br> Modifiziere wave_io dahingehend, dass vom eingelesenen Audiosignal jeder zweite Abtastwert
+        verworfen wird und das resultierende Signal abgespeichert wird.</br> Der Header muss natürlich
         entsprechend verändert werden</p>
 <p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 f.</h3>
 <p>Wende das erstellte Programm auf die von mir geschickten Sinusdateien an (sine_hiXX.wav und
-        sine_loXX.wav) an. Welche Frequenzen erscheinen nach dem Down-Sampling? Was würde
+        sine_loXX.wav) an. </br>Welche Frequenzen erscheinen nach dem Down-Sampling? Was würde
         passieren, wenn man geeignet bandbegrenzen würde?</p>
 <p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 g.</h3>
 <p>Nun wende das Downsampling auf deine Sprachdatei an und beschreibe, wie sich der Klang
-        verändert. Erkläre, warum das passiert!</p>
+        verändert. </br>Erkläre, warum das passiert!</p>
 <p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 a.</h3>
-<p>Die herkömmlichen PC-Soundkarten arbeiten meist entweder mit 16 oder 8 bit-Auflösung. Wie
+<p>Die herkömmlichen PC-Soundkarten arbeiten meist entweder mit 16 oder 8 bit-Auflösung. </br>Wie
         groß ist die Anzahl bei diesen beiden Werten darstellbaren Amplitudenwerten?</p>
 <p>Allgemein: Anzahl der Werte = 2^bits
 </br> 16 bit-Auflösung = 2^16 = 65.536
@@ -128,16 +131,16 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 </p>
 
 <br><h3>Aufgabe 3 b.</h3>
-<p>Modifiziere wave_io dahingehend, dass die Bitanzahl reduziert wird. Dazu werden alle Samples
-        durch eine Potenz von 2 geteilt (Integer-Division ohne Rest). Damit das resultierende Signal nicht
+<p>Modifiziere wave_io dahingehend, dass die Bitanzahl reduziert wird.</br> Dazu werden alle Samples
+        durch eine Potenz von 2 geteilt (Integer-Division ohne Rest).</br> Damit das resultierende Signal nicht
         leiser wird als das Original, wird die Operation durch Multiplikation mit derselben 2er Potenz
-        kompensiert. Zu beachten: Der Datentyp hat nach wie vor 16 bit!</p>
+        kompensiert. </br>Zu beachten: Der Datentyp hat nach wie vor 16 bit!</p>
 <p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 c.</h3>
 <p>Mit dem entstandenen Programm sollen nun die in Aufgabe 1 erzeugten Wave-Dateien (Sprache
-        und Musik) bitreduziert werden. Ab welcher Bitanzahl tritt eine hörbare, also deutliche
-        Verschlechterung der Qualität ein? Bei wie viel Bit ist das Sprachsignal noch verständlich?</p>
+        und Musik) bitreduziert werden. </br>Ab welcher Bitanzahl tritt eine hörbare, also deutliche
+        Verschlechterung der Qualität ein? </br>Bei wie viel Bit ist das Sprachsignal noch verständlich?</p>
 <p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 d.</h3>
@@ -147,12 +150,12 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
 
 <br><h3>Aufgabe 3 e.</h3>
 <p>Modifiziere dein Programm noch einmal so, dass auch das Differenzsignal zwischen Original und
-        bitreduziertem Signal, d.h. der Quantisierungsfehler ausgegeben werden kann. Dabei musst du
+        bitreduziertem Signal, d.h. der Quantisierungsfehler ausgegeben werden kann.</br> Dabei musst du
         bedenken, dass z.B. bei der 1 Bit Reduzierung das Quantisierungsrauschen nur von -1 bis +1
-        verlaufen würde. Dieser Wertebereich wäre viel zu klein, als dass man das Rauschen beim
-        Abspielen als 16bit-Wert noch hören könnte. Daher muss das Rauschen durch Multiplikation mit
-        einer 2er Potenz verstärkt werden. In anderen Worten: Hat man vorher durch 2^n geteilt, sollte
-        man das Differenzsignal vor dem Abspeichern mit 2^(16-n-1) multiplizieren. So ist sichergestellt,
+        verlaufen würde. </br>Dieser Wertebereich wäre viel zu klein, als dass man das Rauschen beim
+        Abspielen als 16bit-Wert noch hören könnte.</br> Daher muss das Rauschen durch Multiplikation mit
+        einer 2er Potenz verstärkt werden.</br> In anderen Worten: Hat man vorher durch 2^n geteilt, sollte
+        man das Differenzsignal vor dem Abspeichern mit 2^(16-n-1) multiplizieren. </br>So ist sichergestellt,
         dass der Verstärkungsfaktor mit der Anzahl der gelöschten Bits kleiner wird</p>
 <p><!--Loesung--></p>
 
