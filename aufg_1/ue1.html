@@ -51,10 +51,11 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
         
 <br><h3>Aufgabe 1 d.</h3>
 <p>Berechne die Bitrate für die beiden Dateien</p>
-<p>Berechnung für die Musik-Datei
-</br>
+<p>Allgemein: Bitrate = Abtastfrequenz * Bits * Kanäle
+</br>Berechnung für die Musik-Datei
+</br> Bitrate = 44100 * 16 * 2 = 1.411.200 bits/s 
 </br>Berechnung für die Sprach-Datei
-</br>
+</br> Bitrate = 16000 * 16 * 1 = 256.000 bits/s  <!--verstehe die lösung von den andern nicht, dachte so weil nur 1 Kanal -->
 </p>
 
 <br><h3>Aufgabe 2 a.</h3>
@@ -65,23 +66,23 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
         Schwingungen. Begründe!</p>
 <audio controls><source src="rauschen.wav" type="audio/wav"></audio>
 <audio controls><source src="rauschen.wav" type="audio/wav"></audio>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 b.</h3>
 <p>Überprüfe deine Schätzung mit dem Programm PRAAT. (Vorgehensweise: Read file..., To
         Spectrum..., Edit)</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 c.</h3>
 <p>Bei der zeitlichen Diskretisierung eines Analogsignals muss das sogenannte Abtasttheorem
         eingehalten werden. Wie lautet es und wie lässt sich der Grenzfall, für den es gerade noch gilt,
         illustrieren? Erstelle hierzu eine Zeichnung und erläutere.</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 d.</h3>
 <p>Bei herkömmlichen Soundkarten tritt systembedingt kein Aliasing auf, weil das Audiosignal stets
         geeignet vorbehandelt wird. Wie sieht diese Vorbehandlung aus?</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 e.</h3>
 <p>Mit einem kleinen Trick lässt sich Aliasing jedoch nachweisen. Diese auch als Down-Sampling
@@ -91,41 +92,44 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
         hörbar werden. Modifiziere wave_io dahingehend, dass vom eingelesenen Audiosignal jeder zweite Abtastwert
         verworfen wird und das resultierende Signal abgespeichert wird. Der Header muss natürlich
         entsprechend verändert werden</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 f.</h3>
 <p>Wende das erstellte Programm auf die von mir geschickten Sinusdateien an (sine_hiXX.wav und
         sine_loXX.wav) an. Welche Frequenzen erscheinen nach dem Down-Sampling? Was würde
         passieren, wenn man geeignet bandbegrenzen würde?</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 2 g.</h3>
 <p>Nun wende das Downsampling auf deine Sprachdatei an und beschreibe, wie sich der Klang
         verändert. Erkläre, warum das passiert!</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 a.</h3>
 <p>Die herkömmlichen PC-Soundkarten arbeiten meist entweder mit 16 oder 8 bit-Auflösung. Wie
         groß ist die Anzahl bei diesen beiden Werten darstellbaren Amplitudenwerten?</p>
-<p>Loesung</p>
+<p>Allgemein: Anzahl der Werte = 2^bits
+</br> 16 bit-Auflösung = 2^16 = 65.536
+</br> 8 bit-Auflösung = 2^8 = 256
+</p>
 
 <br><h3>Aufgabe 3 b.</h3>
 <p>Modifiziere wave_io dahingehend, dass die Bitanzahl reduziert wird. Dazu werden alle Samples
         durch eine Potenz von 2 geteilt (Integer-Division ohne Rest). Damit das resultierende Signal nicht
         leiser wird als das Original, wird die Operation durch Multiplikation mit derselben 2er Potenz
         kompensiert. Zu beachten: Der Datentyp hat nach wie vor 16 bit!</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 c.</h3>
 <p>Mit dem entstandenen Programm sollen nun die in Aufgabe 1 erzeugten Wave-Dateien (Sprache
         und Musik) bitreduziert werden. Ab welcher Bitanzahl tritt eine hörbare, also deutliche
         Verschlechterung der Qualität ein? Bei wie viel Bit ist das Sprachsignal noch verständlich?</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 d.</h3>
 <p>Was charakterisiert das entstehende Quantisierungsgeräusch bei der Bitreduzierung und macht es
         besonders störend?</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 e.</h3>
 <p>Modifiziere dein Programm noch einmal so, dass auch das Differenzsignal zwischen Original und
@@ -136,12 +140,12 @@ Schnitt am Beginn einer musikalischen Figur bzw. eines Satzes liegt.</p>
         einer 2er Potenz verstärkt werden. In anderen Worten: Hat man vorher durch 2^n geteilt, sollte
         man das Differenzsignal vor dem Abspeichern mit 2^(16-n-1) multiplizieren. So ist sichergestellt,
         dass der Verstärkungsfaktor mit der Anzahl der gelöschten Bits kleiner wird</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 <br><h3>Aufgabe 3 f.</h3>
 <p>Welchen Charakter hat das Rauschen bei einer Reduktion um 1bit und wie verändert es sich bei
         zunehmender Bit-Reduktion?</p>
-<p>Loesung</p>
+<p><!--Loesung--></p>
 
 </body>
 </html>
