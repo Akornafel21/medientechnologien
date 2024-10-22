@@ -60,18 +60,15 @@
 </p>
 <br>
 <h2>Aufgabe 2 – Aliasing</h2>
-<h3>Aufgabe 2 a. und b.</h3>
+<h3>Aufgabe 2 a. </h3>
 <br><p>Rauschen</p>
 <p>Modifiziere wave_io dahingehend, dass die Samples in der WAV-Datei in eine (lesbare) ASCII-
-        Datei geschrieben werden. </br>Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz)
-        ein und bestimme aus den resultierenden Zahlenfolgen </br>in der ASCII-Datei die Frequenz der Sinus-
-        Schwingungen. Begründe!</p>
+        Datei geschrieben werden.
+</br>Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz)
+</br>Bestimme aus den resultierenden Zahlenfolgen in der ASCII-Datei die Frequenz der Sinus-
+        Schwingungen.</p>
 <audio controls><source src="audio/sine_hi03.wav" type="audio/wav"></audio>
 <audio controls><source src="audio/sine_lo03.wav" type="audio/wav"></audio>
-<p>Modifiziere wave_io dahingehend, dass die Samples in der WAV-Datei in eine (lesbare) ASCII-
-        Datei geschrieben werden. Lies die von mir geschickten Sinusdateien (Sampling-Frequenz: 16 kHz)
-        ein und bestimme aus den resultierenden Zahlenfolgen in der ASCII-Datei die Frequenz der Sinus-
-        Schwingungen.</p>
 <p>
 </br><b>Verarbeite Datei:</b> sine_hi03.wav
 </br><b>Sample-Rate:</b> 16000.0 Hz
@@ -85,6 +82,32 @@
 </br><b>ASCII-Datei erstellt:</b> ./data l/sine_lo_output.txt
 </br><b>Output sine_lo03</b><br><a href="dateien/sine_lo_output.txt" download>Download Text File</a>
 </p>  
+<p><b>Output:</b></p>
+<p>
+</br><img src="bilder/sine_dateien_output.jpeg" height="100" alt="Bild kann nicht geladen werden.">
+</p>
+
+<p>
+</br>Frequenz der Sinusschwingung = Samplingfrequenz (Abtastfrequenz) / Anzahl der Werte pro Periode   
+</br>Berechnung für die Musik-Datei <b>sine_hi03.wa</b>
+</br>Anzahl der Werte pro Periode = 8
+</br>Frequenz der Sinusschwingung = 8000 / 8 = 1000 Hz
+<p>
+</br><b>Begründung:</b>
+</br>Die Frequenz einer periodischen Funktion ist invers proportional zur Anzahl der Abtastungen pro Periode.
+</br>Da sich die Werte nach 8 Abtastungen wiederholen, entspricht dies einer vollständigen Sinusperiode,
+</br>und somit bestimmt die Anzahl der Abtastungen zusammen mit der Samplingfrequenz die Frequenz der Schwingung.
+</p>
+</br>Berechnung für die Musik-Datei <b>sine_lo03.wa</b>
+</br>Anzahl der Werte pro Periode = 16
+</br>Frequenz der Sinusschwingung = 8000 / 16 = 500 Hz
+</br><b>Begründung:</b>
+</br>Die Periode dieser Sinusschwingung erstreckt sich über 16 Werte, das bedeutet, dass die Schwingung langsamer ist als die vorherige,
+</br>die 8 Werte pro Periode hatte. Die Frequenz ist die Anzahl der vollständigen Schwingungen pro Sekunde,
+</br>und sie hängt davon ab, wie viele Werte eine Periode darstellen und wie häufig diese Werte pro Sekunde abgetastet werden.
+</br>Da sich das Muster nach 16 Werten wiederholt und die Samplingfrequenz bekannt ist (angenommene 8000 Hz), ergibt sich eine Schwingungsfrequenz von 500 Hz.
+</p>
+
 
 <br><h3>Aufgabe 2 c.</h3>
 <p>Bei der zeitlichen Diskretisierung eines Analogsignals muss das sogenannte Abtasttheorem
