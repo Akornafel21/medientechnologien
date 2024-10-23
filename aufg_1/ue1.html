@@ -89,7 +89,7 @@
 
 <p>
 </br>Frequenz der Sinusschwingung = Samplingfrequenz (Abtastfrequenz) / Anzahl der Werte pro Periode   
-</br>Berechnung für die Musik-Datei <b>sine_hi03.wa</b>
+</br>Berechnung für die Musik-Datei <b>sine_hi03.wav</b>
 </br>Anzahl der Werte pro Periode = 8
 </br>Frequenz der Sinusschwingung = 8000 / 8 = 1000 Hz
 <p>
@@ -98,7 +98,7 @@
 </br>Da sich die Werte nach 8 Abtastungen wiederholen, entspricht dies einer vollständigen Sinusperiode,
 </br>und somit bestimmt die Anzahl der Abtastungen zusammen mit der Samplingfrequenz die Frequenz der Schwingung.
 </p>
-</br>Berechnung für die Musik-Datei <b>sine_lo03.wa</b>
+</br>Berechnung für die Musik-Datei <b>sine_lo03.wav</b>
 </br>Anzahl der Werte pro Periode = 16
 </br>Frequenz der Sinusschwingung = 8000 / 16 = 500 Hz
 </br><b>Begründung:</b>
@@ -110,9 +110,9 @@
 <br><h3>Aufgabe 2 b.</h3>
 <p>Überprüfe deine Schätzung mit dem Programm PRAAT. (Vorgehensweise: Read file..., To
         Spectrum..., Edit)</p>
-<p></br>Musik-Datei <b>sine_hi03.wa</b>:</p>
+<p></br><b>sine_hi03.wav</b>:</p>
 </br><img src="bilder/spuctrum_sine_hi03.jpeg" height="500" alt="Bild kann nicht geladen werden.">
-<p></br>Musik-Datei <b>sine_lo03.wa</b>:</p>
+<p></br><b>sine_lo03.wav</b>:</p>
 </br><img src="bilder/spuctrum_sine_lo03.jpeg" height="500" alt="Bild kann nicht geladen werden.">
 
 
@@ -152,13 +152,28 @@
         hörbar werden.</br> Modifiziere wave_io dahingehend, dass vom eingelesenen Audiosignal jeder zweite Abtastwert
         verworfen wird und das resultierende Signal abgespeichert wird.</br> Der Header muss natürlich
         entsprechend verändert werden</p>
-<p><!--Loesung--></p>
+<p></br>Musik-Datei <b>musik_Bytewave.wav</b>:</p>
+</br><img src="bilder/downSampled_musik_Bytewave.jpeg" height="250" alt="Bild kann nicht geladen werden.">
+<p></br>Sprache-Datei <b>Sprache_Bytewave.wav</b>:</p>
+</br><img src="bilder/downSampled_Sprache_Bytewave.jpeg" height="250" alt="Bild kann nicht geladen werden.">
+
 
 <br><h3>Aufgabe 2 f.</h3>
 <p>Wende das erstellte Programm auf die von mir geschickten Sinusdateien an (sine_hiXX.wav und
         sine_loXX.wav) an. </br>Welche Frequenzen erscheinen nach dem Down-Sampling? Was würde
         passieren, wenn man geeignet bandbegrenzen würde?</p>
-<p><!--Loesung--></p>
+<p></br><b>sine_hi03.wav</b>:</p>
+</br><img src="bilder/downSampled_sine_hi03.jpeg" height="250" alt="Bild kann nicht geladen werden.">
+<p></br><b>sine_lo03.wav</b>:</p>
+</br><img src="bilder/downSampled_sine_lo03.jpeg" height="250" alt="Bild kann nicht geladen werden.">
+<p></br><b>Frequenzen nach dem Downsampling:</b></br>- Wenn das Originalsignal Frequenzen im Bereich von 0 bis 8 kHz hatte, bleiben diese Frequenzen auch nach dem Downsampling korrekt erhalten.
+</br>- Frequenzen oberhalb von 8 kHz werden jedoch nach dem Downsampling als tieferliegende Frequenzen interpretiert, weil sie die neue Abtastfrequenz überschreiten.
+</br>Dies führt zu Aliasing, also einer Überlagerung von hohen Frequenzen als niedrigere Frequenzen.</p>
+<p>Um Aliasing zu verhindern, sollte das Signal vor dem Downsampling bandbegrenzt werden.
+         Das bedeutet, man müsste mit einem Tiefpassfilter alle Frequenzen oberhalb der halben Abtastfrequenz (hier 8 kHz) entfernen. 
+         Dadurch bleiben nur die Frequenzen, die korrekt dargestellt werden können, und Aliasing wird vermieden.
+
+        Mit einer geeigneten Bandbegrenzung würde das Downsampled-Signal die richtigen Frequenzen ohne Verzerrungen darstellen, da alle problematischen hohen Frequenzen herausgefiltert würden.</p>
 
 <br><h3>Aufgabe 2 g.</h3>
 <p>Nun wende das Downsampling auf deine Sprachdatei an und beschreibe, wie sich der Klang
