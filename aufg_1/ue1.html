@@ -179,8 +179,23 @@
 <p>Nun wende das Downsampling auf deine Sprachdatei an und beschreibe, wie sich der Klang
         verändert. </br>Erkläre, warum das passiert!</p>
 <audio controls><source src="audio/downSampled_Sprache.wav" type="audio/wav"></audio>
-<P></br><img src="bilder/down_Sprache_Bytewave.jpeg" height="450" alt="Bild kann nicht geladen werden.">
+<p></br><img src="bilder/down_Sprache_Bytewave.jpeg" height="450" alt="Bild kann nicht geladen werden.">
         <img src="bilder/praat_Sprache_Bytewave.jpeg" height="450" alt="Bild kann nicht geladen werden."></p>
+<p><b>Vergleich der Sampling-Frequenzen:</b>
+</br>Ursprüngliche Sprachdatei: Sampling-Frequenz: 16.000 Hz
+</br>Frequenzbereich: Nach dem Nyquist-Theorem können Frequenzen bis maximal 8.000 Hz (halbe Abtastrate) dargestellt werden.
+</br>Downsampled Sprachdatei: Sampling-Frequenz: 8.000 Hz
+</br>Frequenzbereich: Nach dem Downsampling können nur Frequenzen bis maximal 4.000 Hz dargestellt werden.</p>
+</br><b>Warum ist es so?</b>
+</br>Die Sampling-Frequenz bestimmt, wie oft pro Sekunde ein analoges Signal in digitale Werte umgewandelt wird.
+</br>Das Nyquist-Theorem besagt, dass die Abtastrate mindestens doppelt so hoch sein muss wie die höchste Frequenz im Signal,
+</br>um es korrekt zu repräsentieren.
+</br><b>Wie sich der Klang verändert hat?</b>
+</br>Durch das Downsampling der Sprachdatei hat sich der Klang verändert, indem er dumpfer und weniger klar geworden ist.
+</br>Beim Reduzieren der Sampling-Frequenz von 16 kHz auf 8 kHz wurden viele der höheren Frequenzen entfernt, die normalerweise zur Klarheit der Sprache beitragen. 
+</br>Dadurch wirkt die Stimme weniger detailliert und es fehlen feine Nuancen, die für die Verständlichkeit wichtig sind.
+</br>Besonders in den höheren Tonlagen fehlen wichtige Klanginformationen, wodurch der Gesamteindruck flacher und weniger dynamisch klingt.
+
 
 <br><h3>Aufgabe 3 a.</h3>
 <p>Die herkömmlichen PC-Soundkarten arbeiten meist entweder mit 16 oder 8 bit-Auflösung. </br>Wie
