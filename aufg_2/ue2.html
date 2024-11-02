@@ -38,15 +38,36 @@
 <p>Modifiziere bmp_io dahingehend, dass die RGB Werte der einzelnen Pixel in der BMP-Datei in eine (lesbare) ASCII-Datei geschrieben werden. <br>Es reichen dabei jeweils eine
     Zeile und eine Spalte! Lies die von mir geschickten Testdateien ein <br>und schätze aus den resultierenden Zahlenfolgen die Periodendauer in Pixeln in horizontaler und vertikaler
     Richtung. <br>(Jeweils eine Periode horizontal und eine vertikal für das Übungsprotokoll abspeichern).</p>
-<img src="./pics/stadt.png" alt="Marsch &uuml;ber die Stra&szlig;e" width="450" height="300">
-<p>Bescheibung</p>
-<p>Loesung</p>
+<p>Horizontal und Vertikal</p>    
+<img src="./grating_H11.bmp" width="250">
+<img src="./grating_V11.bmp" width="250">
+<p>Schätzung der Periodendauer:</p>
+<p> Horizontale Werte:
+    <br>Die Werte scheinen ein Muster zu bilden, das zwischen dunkleren und helleren Tönen wechselt. 
+    <br>Eine Schätzung der Periode könnte sich darauf stützen, dass sich die Werte in Abständen wiederholen.
+    <br>Die Periodendauer beträgt 34 Pixel.
+    <br>1, 22, 99, 190, 248, 241, 173, 81, 13, 6, 63, 155, 232, 253, 206, 118, 34, 
+    <br>0, 34, 118, 206, 253, 232, 155, 64, 6, 13, 81, 173, 241, 248, 191, 99, 22, 1
+    
+    <br><br>Vertikale Werte:
+    <br>Alle Werte sind konstant bei 249, was darauf hinweist, dass es kein periodisches Muster gibt. 
+    <br>In diesem Fall wäre die Periode 1 Pixel, da jeder Wert identisch ist.
+    <br>249, 249, 249, 249,249, 249, 249, 249</p>
 
 <br><h3>Aufgabe 2 - 2.2</h3>
 <p>Auch bei der Bildabtastung muss das sogenannte Abtasttheorem eingehalten werden. 
     <br>Wie lautet es und wie läßt sich der Grenzfall, für den es gerade noch gilt, illustrieren
     (Zeichnung !)?</p>
-<p><!--Lösung-->-</p>
+<p>Das Abtasttheorem bei der Bildabtastung besagt, 2 Pixel pro Periode beträgt.<br>
+    <br> ​Im Detail:
+    <br> - Bild enthält räumliche Frequenzen
+    <br>o Werden von den feinen Details und Strukturen im Bild bestimm
+    <br>o muss mit mindestens 2 Pixeln pro Periode abgetastet werden
+    <br>- bedeutet, dass…
+    <br>o …kleinste Struktur im Bild, die noch korrekt dargestellt werden soll, durch mindestens 2 Pixel erfasst werden muss
+    <br>▪ …um korrekte Rekonstruktion zu ermöglichen
+    <br>▪ …um Aliasing zu vermeiden
+    </p>
 
 <br><h3>Aufgabe 2 - 2.3</h3>
 <p>Erzeuge aus deinen eigenen Farbbildern Graustufen-Bilder. <br>Dazu muss der Helligkeitswert Y aus den RGB-Werten errechnet werden. 
@@ -56,13 +77,53 @@
 <p><!--Lösung-->-</p>
 
 <br><h3>Aufgabe 2 - 2.4</h3>
-<p>Erkläre, wie bei Bild- und Videoaufnahmen Aliasing entstehen kann. Ähnlich wie bei der 1. Übung am Audiosignal wollen wir auf das Bild ein Down-Sampling anwenden und
-    sehen, wann dabei Aliasing auftritt. Beim Audiosignal haben wir jedes zweite Sample verworfen und damit die Abtastfrequenz halbiert. Beim Bild verringern wir die räumliche
-    Auflösung, indem wir die Zahl der Bildzeilen bzw. Bildspalten verringern. Dabei wollen wir das Bild allerdings nicht verkleinern - was normalerweise die Folge wäre - sondern einfach
-    die ungeradzahligen Spalten durch den Inhalt der geradzahligen Spalten ersetzen, d.h. Spalte 1 wird durch Spalte 0 ersetzt, Spalte 3 durch Spalte 2 etc. und analog für die Zeilen.
-    Wenn das Ursprungsbild nun sehr feine Strukturen aufweist, wie in machen Testdateien, können Aliasing-Verzerrungen sichtbar werden. Achte darauf, dass stets Rot, Grün und
+<p>Erkläre, wie bei Bild- und Videoaufnahmen Aliasing entstehen kann. <br>Ähnlich wie bei der 1. Übung am Audiosignal wollen wir auf das Bild ein Down-Sampling anwenden und
+    sehen, wann dabei Aliasing auftritt. <br>Beim Audiosignal haben wir jedes zweite Sample verworfen und damit die Abtastfrequenz halbiert. <br>Beim Bild verringern wir die räumliche
+    Auflösung, indem wir die Zahl der Bildzeilen bzw. Bildspalten verringern. <br>Dabei wollen wir das Bild allerdings nicht verkleinern - was normalerweise die Folge wäre - sondern einfach
+    die ungeradzahligen Spalten durch den Inhalt der geradzahligen Spalten ersetzen,<br> d.h. Spalte 1 wird durch Spalte 0 ersetzt, Spalte 3 durch Spalte 2 etc. und analog für die Zeilen.<br>
+    Wenn das Ursprungsbild nun sehr feine Strukturen aufweist, wie in machen Testdateien, können Aliasing-Verzerrungen sichtbar werden. <br>Achte darauf, dass stets Rot, Grün und
     Blau getrennt manipuliert werden müssen.</p>
-<p><!--Lösung-->-</p>
+<p>- Bei Bild- und Videoaufnahmen entsteht Aliasing:<br>
+    <br>o wenn feine Strukturen/ Details im Bild aufgrund einer zu niedrigen Abtastrate nicht korrekt dargestellt werden können
+    <br> o Effekt zeigt sich oft durch optische Artefakte wie:
+    <br> ▪ Moiré-Muster
+    <br> ▪ Treppeneffekte
+    <br> o Treten auf, wenn Abtastrate nicht ausreicht, um Frequenz der Details wiederzugeben
+    <br> - Aliasing sichtbar machen
+    <br> o Bild durch Down-Sampling der räumlichen Auflösung manipulieren
+    <br> ▪ ohne das Bild tatsächlich zu verkleinern
+    <br> - verschiedene Arten Down- Sampling durchzuführen:
+    <br> o 1. Räumliche Auflösung verringern:
+    <br> ▪ normalerweise bedeutet Verringern der Auflösung das Bild zu verkleinern
+    <br> ▪ wollen stattdessen bestimmte Bildinformationen verwerfen und Bild in ursprünglicher Größe beibehalten
+    <br> o 2. Zeilen und Spalten zusammenführen:
+    <br> ▪ Inhalte jeder ungeraden Spalte und Zeile mit denen ihrer jeweiligen benachbarten geraden Spalte und Zeile ersetzen:
+    <br>▪ Spalte 1 wird durch Inhalt von Spalte 0 ersetzt, Spalte 3 durch Spalte 2 usw.
+    <br>▪ Ebenso werden Zeile 1, Zeile 3 usw. durch Inhalte der vorangehenden Zeilen ersetzt
+    <br>▪ Prozess entspricht einer ‚Halbierung der räumlichen Frequenz‘ des Bildes
+    <br>▪ ähnlich wie das Halbieren der Abtastfrequenz beim Audiosignal
+    <br>o 3. *Verarbeitung für Farbkanäle (Rot, Grün, Blau)*:
+    <br>▪ Bilder oft in RGB-Kanälen gespeichert
+    <br>▪ Deswegen muss Down-Sampling für jeden Farbkanal einzeln durchgeführt werden
+    <br>▪ Bei jedem Kanal wird das Verfahren angewendet, sodass die ungeraden Zeilen und Spalten durch die Inhalte der benachbarten Zeilen und Spalten ersetzt werden
+    <br>- Aliasing und sichtbare Verzerrungen
+    <br>o Wenn Ursprungsbild feine Strukturen enthält
+    <br>▪ z. B. Linienmuster, Details mit hoher räumlicher Frequenz
+    <br>o führt Verfahren zum Aliasing
+    <br>o Erscheinungen könnten wie folgt aussehen:
+    <br>▪ Moiré-Muster
+    <br>▪ Wiederholte feine Muster im Bild
+    <br>▪ aufgrund der Abtastung mit niedrigerer Auflösung nicht korrekt dargestellt und optisch neue, nicht existierende Muster erzeugt
+    <br>▪ Verlust von Details
+    <br>▪ Z.B. feine Linien, Kanten, könnten verschwimmen/ als dickere, undeutliche Bereiche erscheine
+    <br>▪ Treppeneffekte (Staircase)
+    <br>▪ Diagonale Linien und Kanten werden nicht glatt, sondern als "Stufen" dargestellt
+    <br>▪ da Bild nicht genug Pixel zur Wiedergabe der genauen Form hat
+    <br><br>- Zusammenfassung
+    <br>o Aliasing tritt immer dann auf, wenn…
+    <br>▪ …Auflösung nicht ausreicht, um feine Details im Bild darzustellen.
+    <br>▪ Herabsetzen der räumlichen Frequenz durch das Entfernen von Spalten und Zeilen entspricht einer ‚Halbierung der Abtastrate‘
+    <br>▪ Führt dazu, dass Frequenzen im Bild nicht korrekt wiedergegeben werden können</p>
 
 <br><h3>Aufgabe 2 - 2.5</h3>
 <p>Modifiziere bmp_io dahingehend, dass zunächst in jeder Zeile des eingelesenen Bilds jedes ungeradzahlige Pixel durch das davor liegende geradzahlige Pixel ersetzt wird
