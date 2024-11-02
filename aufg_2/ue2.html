@@ -22,7 +22,7 @@
 <h2>Bild-Grundlagen: Abtastung, Aliasing, Quantisierung</h2>
 <br><h3>Aufgabe 1 - 1.1</h3>
 <p>Erzeuge aus den beiden JPG-Bildern, die dir geschickt wurden, Bitmap-Bilder (BMP) im Format 960x540 Pixel, 24Bit</p>
-<table><tr>
+<table><tr><!--Anya musst du noch einsetzen-->
 <td><img src="./pics/Koala.jpg" alt="Koalabaer auf dem Baum" width="350" height="300"></td>
 <td><img src="./pics/Penguins.jpg" alt="Penguins auf dem Eis" width="350" height="300"></td>
 </tr></table>
@@ -43,16 +43,14 @@
 <img src="./grating_V11.bmp" width="250">
 <p>Schätzung der Periodendauer:</p>
 <p> Horizontale Werte:
-    <br>Die Werte scheinen ein Muster zu bilden, das zwischen dunkleren und helleren Tönen wechselt. 
-    <br>Eine Schätzung der Periode könnte sich darauf stützen, dass sich die Werte in Abständen wiederholen.
-    <br>Die Periodendauer beträgt 34 Pixel.
-    <br>1, 22, 99, 190, 248, 241, 173, 81, 13, 6, 63, 155, 232, 253, 206, 118, 34, 
-    <br>0, 34, 118, 206, 253, 232, 155, 64, 6, 13, 81, 173, 241, 248, 191, 99, 22, 1
-    
-    <br><br>Vertikale Werte:
-    <br>Alle Werte sind konstant bei 249, was darauf hinweist, dass es kein periodisches Muster gibt. 
-    <br>In diesem Fall wäre die Periode 1 Pixel, da jeder Wert identisch ist.
-    <br>249, 249, 249, 249,249, 249, 249, 249</p>
+    <br>Die Werte wiederholen sich nach 36 Pixeln, beginnend und endend bei 1 1 1.
+    <br>Horizontale Periodendauer: 36 Pixel
+    <br><img src="./horizontal_ascii.jpg" width="100">
+    <br> <br>
+    <br>Die Werte wiederholen sich nach 24 Zeilen, beginnend und endend bei 118 118 118.
+    <br>Vertikale Periodendauer: 24 Pixel
+    <br><img src="./vertical_ascii.jpg" width="100">
+    </p>
 
 <br><h3>Aufgabe 2 - 2.2</h3>
 <p>Auch bei der Bildabtastung muss das sogenannte Abtasttheorem eingehalten werden. 
@@ -92,17 +90,18 @@
     <br> - Aliasing sichtbar machen
     <br> o Bild durch Down-Sampling der räumlichen Auflösung manipulieren
     <br> ▪ ohne das Bild tatsächlich zu verkleinern
+    <br>
     <br> - verschiedene Arten Down- Sampling durchzuführen:
     <br> o 1. Räumliche Auflösung verringern:
     <br> ▪ normalerweise bedeutet Verringern der Auflösung das Bild zu verkleinern
     <br> ▪ wollen stattdessen bestimmte Bildinformationen verwerfen und Bild in ursprünglicher Größe beibehalten
-    <br> o 2. Zeilen und Spalten zusammenführen:
+    <br><br> o 2. Zeilen und Spalten zusammenführen:
     <br> ▪ Inhalte jeder ungeraden Spalte und Zeile mit denen ihrer jeweiligen benachbarten geraden Spalte und Zeile ersetzen:
     <br>▪ Spalte 1 wird durch Inhalt von Spalte 0 ersetzt, Spalte 3 durch Spalte 2 usw.
     <br>▪ Ebenso werden Zeile 1, Zeile 3 usw. durch Inhalte der vorangehenden Zeilen ersetzt
     <br>▪ Prozess entspricht einer ‚Halbierung der räumlichen Frequenz‘ des Bildes
     <br>▪ ähnlich wie das Halbieren der Abtastfrequenz beim Audiosignal
-    <br>o 3. *Verarbeitung für Farbkanäle (Rot, Grün, Blau)*:
+    <br><br>o 3. *Verarbeitung für Farbkanäle (Rot, Grün, Blau)*:
     <br>▪ Bilder oft in RGB-Kanälen gespeichert
     <br>▪ Deswegen muss Down-Sampling für jeden Farbkanal einzeln durchgeführt werden
     <br>▪ Bei jedem Kanal wird das Verfahren angewendet, sodass die ungeraden Zeilen und Spalten durch die Inhalte der benachbarten Zeilen und Spalten ersetzt werden
@@ -131,7 +130,38 @@
     dieser Operation nicht ändert, muss der Bild-Header auch nicht verändert werden. Falls du im Ergebnis keine Veränderung sehen kannst, ersetze mehr Spalten, also Spalte 1 und 2
     durch Spalte 0, dann Spalte 1, 2 und 3 durch Spalte 0 usw. Wende diese Manipulation auf die Testbilder an, bis du eine Veränderung in Form eines Moiré-Musters siehst. Notiere,
     bei welcher Verringerung du die Veränderungen beobachtest und beschreibe die Veränderungen! Erkläre das Ergebnis an Hand der von dir bestimmten Periodendauer in Pixeln.</p>
-<p><!--Lösung-->-</p>
+    <p>Das horizontale Down-Sampling bei grating_H11.bmp zeigt interessante visuelle Veränderungen. 
+        <br>   Bei einer Verringerung um den Faktor 2 sind bereits leichte Veränderungen erkennbar, während bei einer Verringerung um den Faktor 4 die Effekte deutlicher werden. 
+        <br>   Diese Veränderungen entstehen, weil die verbleibenden Pixelmuster miteinander interagieren und einen Überlagerungseffekt erzeugen. 
+        <br>   Dadurch entstehen Muster, die vorher nicht sichtbar waren und als Moiré-Muster wahrgenommen werden können. 
+        <br>  Dies lässt sich durch die Periodendauer der Muster im Bild erklären, die durch das Down-Sampling verstärkt wird.
+        <br>  
+        <br>Grating_H11 horizontales Down-Sampling um 2
+    <br><img src="./downsampling/grating_H11_horizontal_downsample_2.bmp" width="400">
+    <br><br>Grating_H11 horizontales Down-Sampling um 4
+    <br><img src="./downsampling/grating_H11_horizontal_downsample_4.bmp" width="400">
+
+    <br><br>Grating_V11 horizontales Down-Sampling um 2
+    <br><img src="./downsampling/grating_V11_horizontal_downsample_2.bmp" width="400">
+    <br><br>Grating_V11 horizontales Down-Sampling um 4
+    <br><img src="./downsampling/grating_V11_horizontal_downsample_4.bmp" width="400">
+</p>
+   <p>Nun wende die Zeilenverringerung vertikal an, d.h. ersetze die Pixel jeder ungeradzahligen Zeile durch die der Zeile davor (vertikales Down-Sampling). Auch hier hat die
+    Manipulation nur bei einer der Testdateien Sinn!</p>
+<p>Das vertikale Down-Sampling ist nur bei grating_V11.bmp sinnvoll, da dieses Bild vertikale Muster enthält, 
+    <br> die durch die Manipulation verstärkt werden. Bei grating_H11.bmp, das horizontale Muster enthält, 
+    <br>verliert das Bild durch vertikales Down-Sampling wichtige Informationen, ohne das ein Effekt sichtbar wird.
+    <br>Daher führt hier das Down-Sampling nur bei grating_V11.bmp zu interessanten Moiré-Mustern.
+
+    <br><br>Grating_V11 vertikales Down-Sampling um 2
+    <br><img src="./downsampling/grating_V11_vertical_downsample_2.bmp" width="400">
+    <br><br>Grating_V11 vertikales Down-Sampling um 4
+    <br><img src="./downsampling/grating_V11_vertical_downsample_4.bmp" width="400">
+    <br>
+    <br>Grating_H11 vertikales Down-Sampling um 2
+    <br><img src="./downsampling/grating_H11_vertical_downsample_2.bmp" width="400">
+    <br><br>Grating_H11 vertikales Down-Sampling um 4
+    <br><img src="./downsampling/grating_H11_vertical_downsample_4.bmp" width="400"></p>
 
 <br><h3>Aufgabe 3 - 3.1</h3>
 <p>Wir wollen nun bmp_io so modifizieren, dass wir die Bitzahl reduzieren können. Dazu können wir z.B. alle RGB-Werte durch eine Potenz von 2 teilen (Integer-Division ohne
