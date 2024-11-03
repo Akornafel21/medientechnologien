@@ -72,7 +72,13 @@
     Es gibt dafür verschiedene Ansätze.<br>
     Nutze die Formel Y= 0,3 x R + 0,6 x G + 0,1 x B, die die Helligkeitsempfindlichkeit des Auges annähert. Mit diesem Y-Wert wird dann die R, G und B-Information überschrieben.
     Speichere die Graustufenbilder ab.</p>
-<p><!--Lösung-->-</p>
+
+    <p>Graustufen- Bild Manmade_Bytewave_grey:
+    <br><img src="./bilder/Manmade_Bytewave_grey.bmp" width="400">
+    <br><br>Graustufen- Bild Nature_Bytewave_grey:
+    <br><img src="./bilder/Nature_Bytewave_grey.bmp" width="400">
+    <br><br>Graustufen Umwandlung:
+    <br><img src="./bilder/Grey_Code_2.3.png" widht="400"></p>
 
 <br><h3>Aufgabe 2 - 2.4</h3>
 <p>Erkläre, wie bei Bild- und Videoaufnahmen Aliasing entstehen kann. <br>Ähnlich wie bei der 1. Übung am Audiosignal wollen wir auf das Bild ein Down-Sampling anwenden und
@@ -190,12 +196,34 @@
     Rest). Damit das resultierende Bild nicht dunkler wird als das Original, kompensieren wir die Operation durch Multiplikation mit derselben Zweierpotenz. Zu beachten: Der Datentyp
     hat nach wie vor eine Bittiefe von 24Bit (8bit pro Farbe!)
     (Denselben Effekt erreicht man auch durch einfaches logisches 'Verunden' mit einem entsprechenden HEX-Wert, indem man mit dem LSB beginnend Bits 'ausblendet'.)</p>
-<p><!--Lösung-->-</p>
+<p><img src="./bilder/Bitreduzierung_reduced_Code_3.1.png" width="400"></p>
 
 <br><h3>Aufgabe 3 - 3.2</h3>
 <p>Mit dem entstandenen Programm verändern wir die in Aufgabe 1 erzeugten BMP-Dateien. Ab welcher Bitzahl tritt beim Detail-Bild und beim Flächen-Bild eine sichtbare
     Verschlechterung der Qualität ein? Wie kann man diese Verschlechterung am besten beschreiben? (Alle Ergebnisbilder ins Übungsprotokoll)</p>
-<p><!--Lösung-->-</p>
+<p>Bitreduzierung Manmade 16 Bit:
+    <br><img src="./bilder/Manmade_Bytewave_reduced16.bmp" width="400">
+    <br><br> Bitreduzierung Manmade 36 Bit:
+    <br><img src="./bilder/Manmade_Bytewave_reduced_36.bmp" width="400">
+    <Br><br> Bitreduzierung Manmade 64 Bit:
+    <br><img src="./bilder/Manmade_Bytewave_reduced64.bmp" width="400">
+    <br><br>Bitreduzierung Nature 16 Bit:
+    <br><img src="./bilder/Nature_Bytewave_reduced16.bmp" width="400">
+    <br><br> Bitreduzierung Nature 36 Bit:
+    <br><img src="./bilder/Nature_Bytewave_reduced_36.bmp" width="400">
+    <Br><br> Bitreduzierung Nature 64 Bit:
+    <br><img src="./bilder/Nature_Bytewave_reduced64.bmp" width="400">
+    <br><br><U>Zusammenfassung 16 Bit Reduzierung:</U>
+    <br>Die Unterschiede zwischen dem Original Bild und dem 26 Bit reduzierten Bild sind minimal. Die Bildqualität bleibt relativ hoch und die Detailgenauigkeit sowie die Farbnuancen
+        scheinen erhalten zu bleiben. Dies deutet darauf hin, dass die Reduzierung für die uns gegebenen Bilder nicht zu einer signifikanter visuellen Verschlechterung führt.
+    <br><br><U>Zusammenfassung 36 Bit Reduzierung:</U>
+    <br>Bei dieser Stuffe sind einige Unterschiede erkennbar, insbesondere in Bereichen mit feinen Farbveräufen.
+    <br><br><U>Zusammenfassung Bit Reduzierung:</U>
+    <br>In diesem Fall zeigt sich eine deutsliche Verschlechterung der Bildqualität. Die Bilder wirken weniger klar und wesentlich kantiger und undefinierter.
+    <br><br><U>Zusammenfassung Bitreduzierung allgemein:</U>
+    <br>Zusammenfassend lässt sich sagen, dass die visuelle Verschlechterung bei der Reduzierung auf 16 Bit nicht signifikant wahrnehmbar ist, während bei 36 Bit bereits einige 
+    subtile Unterschiede sichtbar werden.
+</p>
 
 <br><h3>Aufgabe 3 - 3.3</h3>
 <p>Modifiziere dein Programm noch einmal so, dass auch das Differenzbild zwischen Original und bitreduziertem Bild, das heißt das Fehlerbild ausgegeben, werden kann. Dabei
