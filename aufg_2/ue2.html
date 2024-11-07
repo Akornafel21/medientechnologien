@@ -65,6 +65,7 @@
     <br>o …kleinste Struktur im Bild, die noch korrekt dargestellt werden soll, durch mindestens 2 Pixel erfasst werden muss
     <br>▪ …um korrekte Rekonstruktion zu ermöglichen
     <br>▪ …um Aliasing zu vermeiden
+    <br><br><img src="./bilder/Bildabtastung Zeichnung.jpg" width="400">
     </p>
 
 <br><h3>Aufgabe 2 - 2.3</h3>
@@ -233,7 +234,15 @@
     Wert 0 Schwarz entspricht, während die Null-Linie im Bild-Wertebereich 0...255 aber bei 128, d.h. Mittelgrau, liegt. Daher muss das Differenzbild vor dem Abspeichern durch
     Addition von 128 in diesen Bereich gebracht werden.
     (Bilder all dieser Fälle ins Übungsprotokoll)</p>
-<p><!--Lösung-->-</p>
+<p>Manmade Bitreduzierung und Differenz:
+    <br><img src="./bilder/Manmade_Bytewave_diff2.bmp" width="400">
+    <br><br> Nature Bitreduzierung und Differenz:
+    <br><img src="./bilder/Nature_Bytewave_diff2.bmp" width="400">
+    <br><br>Der Fehler wurde verstärkt, indem wir den Fehlerwert multiplizieren und dann 128 addieren, um den Wert in den Bereichen von 0 und 255 zu verschieben, wobei 0 schwarz
+            und 128 Mittelgrau ist.
+            <br>Die RGB- Werte der Pixel wurden durch den Divisor (36) reduziert, was zu einem Verlust an Farbdetails führte. Um die Fehler zwischen den Bildern sichtbar zu machen
+            wurde der Unterschied in den RGB- Werten berechnet und mit 2^(8-n-1) verstärkt, bevor 128 hinzugefügt wurde.
+</p>
 
 </body>
 </html>
