@@ -124,8 +124,52 @@
 </p>
 
 <br><h3>Aufgabe 3 - 3.1</h3>
-<p>Loesung</p>
-<p><!--Loesung--></p>
+<p>Klangnachbildung: Wir wollen nun versuchen, selber einen interessanten Klang zu
+        kreieren. Die einzigen Anforderungen ist, dass wir dazu die für Aufgabe 4 vorgesehene
+        Taste drücken, und dass es ein monophoner Klang ist, d.h. dass nur eine Taste gedrückt
+        wird und eine Note
+        erklingt. Zunächst wählen wir die Grundwellenform (Rechteck, Sägezahn, etc.), die
+        klanglich am besten zu unserem Instrument passt. Um die Hüllkurve entsprechend
+        manipulieren zu können, brauchen wir ein ADSR-Modul („Envelope“), das wir zwischen dem
+        Ausgang GATE des MIDI-Moduls und EXP Eingängen der VCAs  einbauen. 
+        Damit versuchen wir zunächst den zeitlichen Verlauf einzustellen.
+       </p>
+
+<p><img src="./bilder/VCV_aufg3.png" width="500" height="350">
+<br><br><b>Audion Beispiele</b>
+<br><br>Öfteres Abspielen von dem Ton:
+<br><audio controls><source src="audio/Aufzeichnung1.wav" type="audio/wav"></audio>
+<br>lang gehaltener Ton:
+<br><audio controls><source src="audio/Aufzeichnung2langerTon.wav" type="audio/wav"></audio>
+<br><br> Wir haben uns entschieden einen Trompeten- Klang zu erzeugen, der eine warme und lebhafte
+Tonqualität hat. Hier ist eine detaillierte Beschreibung der verschiedenen Komponenten, die wir 
+verwendet haben: 
+<br><br><b>Oszillator (VCO):</b>
+<br>Der Oszillator ist das Herzstück des Klanges und wurde auf eine Sägezahn-Wellenform eingestellt, 
+die reich an Obertönen ist und dem Klang die gewünschte Helligkeit verleiht.
+<br><br><b>ADSR-Einstellungen:</b>
+<br><u>Attack:</u> Ein kurzer, schneller Anstieg sorgt dafür, dass der Klang schnell einsetzt, wie bei einer 
+Trompete, die sofort auf Luftdruck reagiert.
+<br><br><u>Decay:</u> Eine mittellange Abklingzeit reduziert die Lautstärke nach dem ersten Anschlag, um die 
+natürliche Dämpfung eines Blechblasinstruments zu simulieren.
+<br><br><u>Sustain:</u> Ein mäßiges Sustain-Level sorgt dafür, dass der Ton nach dem Decay-Abschnitt stabil bleibt, 
+was typisch für die kontinuierliche Luftzufuhr bei Blasinstrumenten ist.
+<br><br><u>Release:</u> Eine kurze Release-Zeit sorgt dafür, dass der Klang schnell abklingt, wenn die Taste losgelassen wird.
+<br><br><b>Filtertyp (VCF):</b>
+<br>Ein Tiefpassfilter wurde verwendet, um die höheren Frequenzen abzuschwächen und den Klang weicher zu machen. 
+Der Cutoff-Frequenzbereich wurde so eingestellt, dass er den typischen Klang einer Trompete imitiert. Ein leichter 
+Resonanzwert wurde hinzugefügt, um den Klang lebendiger zu machen.
+<br><br><b>Endgültige Struktur des Synthesizers:</b>
+<br>MIDI-CV: Dieses Modul wandelt MIDI-Signale in Steuerspannungen um, um den Oszillator anzusteuern.
+<br>VCO (Voltage-Controlled Oscillator): Erzeugt das Basissignal, eine Sägezahn-Welle, die reich an Obertönen ist.
+<br>ADSR EG (Attack, Decay, Sustain, Release Envelope Generator): Formt die Amplitude des Klanges über die Zeit.
+<br>VCA (Voltage-Controlled Amplifier): Kontrolliert die Amplitude des Audiosignals.
+<>VCF (Voltage-Controlled Filter): Filtert das Audiosignal mit einem Tiefpassfilter, um den gewünschten Klang zu erzeugen.
+<br>AUDIO 8: Kümmert sich um den Audioeingang und -ausgang.
+<br>SCOPE: Visualisiert das Audiosignal zur Kontrolle und Analyse.
+<br><br>Diese Module wurden entsprechend verkabelt, um das charakteristische Trompeten-Klangbild zu erzeugen.
+
+</p>
 
 <br><h3>Aufgabe 3 - 3.2</h3>
 <p>Loesung</p>
