@@ -1,0 +1,178 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="format.css">
+<style type="text/css">
+        
+                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
+                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
+                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
+        
+</style>
+</head>
+
+<body>
+
+<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+         <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
+         folgenden.</p>
+</iframe>
+
+<h2>Uebung 3</h2>
+<br><h3>Aufgabe 1 - 1.1</h3>
+<p>Einfache Schwingungsformen: Zunächst brauchen wir nur die oben beschriebenen
+        Module. Wir schauen uns die Wellenformen der Grundklänge des Oszillators an
+        (Sägezahn, Rechteck, etc.). Wir können nun Beispiele der einzelnen Klänge durch
+        Drücken einer Taste spielen und mit dem Recorder aufzeichnen. Wie man das Recorder-
+        Plugin aktiviert, zeige ich im Übungstermin! Man benötigt dafür einen (kostenfreien)
+        VCVRack-Account. Wichtig: RECorder und AUDIO müssen auf dieselbe Sampling-
+        Frequenz von 48 kHz eingestellt werden.</p>
+<p><img src="./bilder/VCV_aufg1.jpeg" height="700"></p>
+
+<br><h3>Aufgabe 1 - 1.2</h3>
+<p>Außerdem lässt sich in Praat das Spektrum anzeigen (Wave einlesen, To Spectrum…,
+        Edit). Es erscheint eine Liniendarstellung des Amplitudenspektrums mit dB-Angaben.</br>Aus
+        diesen können wir dann lineare Prozentwerte mit Bezug auf die Grundschwingung
+        berechnen. Wir setzen dazu die Amplitude der Grundschwingung mit 0 dB entsprechend
+        100 % an.</br>Bei der Square-Welle variieren wir die Pulsweite, d.h. das zeitliche Verhältnis
+        zwischen positivem und negativem Schwingungsteil, mit dem Regler P-WIDTH am
+        Oszillator und beobachten,</br>wie sich das Verhältnis der Obertöne verändert. Dazu
+        betrachten wir drei Fälle: 50/50, 30/70 und 10/90 zwischen positivem und negativem Teil,
+        ablesbar am Oszilloskop.
+
+</br>Ins Ergebnisprotokoll: Bilder der Spektren für drei markante P-Width-Einstellungen beim
+        Rechteck, ein Sägezahn, ein Dreieck, Ausschnitte aus den wavs,</br>Angaben der
+        Frequenzen und Amplituden in dB und Prozentwerten für die Grundschwingung und die
+        ersten drei Obertöne, bei denen die Amplitude größer 0 ist</p>
+<p><b>Ergebnisprotokoll:</b></p>
+<p><b>Formel für die Rechnung:</b></p>
+<br><img src="./bilder/formel.jpeg" width="550">
+
+<p><br><b>der Fall 50/50</b></p>       
+<p><audio controls><source src="audio/aufg_50.wav" type="audio/wav"></audio></p> 
+<p><img src="./bilder/formel_50.jpeg" width="550"></p>      
+<p>
+        <td><img src="./bilder/vcv_50.jpeg" width="550" height="350"></td>
+        <td><img src="./bilder/spectrum_50.jpeg" width="550" height="350"></td>
+</p></br>
+
+<p><b>der Fall 70/30</b></p>  
+<p><audio controls><source src="audio/aufg_70.wav" type="audio/wav"></audio></p>
+<p><img src="./bilder/formel_70.jpeg" width="550"></p>        
+<p>
+        <td><img src="./bilder/vcv_70.jpeg" width="550" height="350"></td>
+        <td><img src="./bilder/spectrum_70.jpeg" width="550" height="350"></td>
+</p></br>
+
+<p><b>der Fall 90/10</b></p>  
+<p><audio controls><source src="audio/aufg_90.wav" type="audio/wav"></audio></p>
+<p><img src="./bilder/formel_90.jpeg" width="550"></p>         
+<p>
+        <td><img src="./bilder/vcv_90.jpeg" width="550" height="350"></td>
+        <td><img src="./bilder/spectrum_90.jpeg" width="550" height="350"></td>
+</p>
+
+<br><h3>Aufgabe 2 - 2.1</h3>
+<p>Schwebung: Nun bringen wir einen zweiten Oszillator zum Einsatz. <br>Um die
+        Ausgänge der beiden Oszillatoren anschließen und in der Lautstärke regeln zu können,
+        benötigen wir ein MIXER-Modul, das wir zwischen die beiden VCAs und AUDIO schalten.<br>
+        Bei der Standardversion des VCO in VCV-Rack fehlt ein Fine-Regler für die Frequenz.<br>
+        Man kann die Frequenz zwar direkt eingeben, aber das ist etwas unpraktisch. In der
+        Zunächst stellen wir beide Oszillatoren auf exakt dieselbe Frequenz und
+        Dreiecksschwingung. <br>Dann verstimmen wir den zweiten gegen den ersten und zeichnen
+        den Klang auf, wenn wir gerade eine Amplitudenmodulation feststellen (Fall A), d.h. einen
+        in der Lautstärke schwankenden Ton.<br> Wir verstimmen die Oszillatoren weiter
+        gegeneinander, bis wir den Eindruck einer Dissonanz haben (Fall B), d.h. es entsteht ein
+        rauer, unangenehmer Klang.<br></p>
+<p><img src="./schwebung/vcv_schwebung.jpg" width="1100">
+        </br></br></br>
+        Fall A:</br>
+        <audio controls><source src="schwebung/schwebung_3.wav" type="audio/wav"></audio>
+        </br></br>
+        Fall B:</br>
+        <audio controls><source src="schwebung/schwebung_30.wav" type="audio/wav"></audio>
+
+</p>
+
+<br><h3>Aufgabe 2 - 2.2</h3>
+<p>Nun stellen wir mit Praat im Spektrum für die beiden Fälle die Mittel- und
+        Differenzfrequenzen der Schwingungen fest. Man kann die Differenzfrequenz aber auch aus
+        dem Oszillogramm der amplitudenmodulierten Schwingung berechnen (z.B. in Samplitude
+        anschauen). Die Periodendauer der Differenzfrequenz entspricht nämlich exakt dem
+        Abstand zwischen zwei Punkten maximaler (oder minimaler) Amplitude. Ins
+        Ergebnisprotokoll für beide Fälle: Mittenfrequenz und Differenzfrequenz, Zeitdarstellung,
+        Spektrum und wav.</p>
+<p>
+        Fall A:</br>
+        <audio controls><source src="schwebung/schwebung_3.wav" type="audio/wav"></audio>
+</br> <img src="./schwebung/schwebung_3praat.jpg" width="550" height="350">
+        <img src="./schwebung/spectrum_3.jpg" width="550" height="350">
+        </br> Fine: 3 cents
+        </br> Frequenz: 110Hz 
+        </br> Mittenfrequenz: (109.76 + 110.22)/2 = 109.99Hz
+        </br> Differenzfrequenz: 110.22 - 109.76 = 0.46Hz  
+
+        </br></br></br></br>
+        Fall B:</br>
+        <audio controls><source src="schwebung/schwebung_30.wav" type="audio/wav"></audio>
+</br> <img src="./schwebung/schwebung_30praat.jpg" width="550" height="350">
+        <img src="./schwebung/spectrum_30.jpg" width="550" height="350">
+</br> Fine: 30 cents
+</br> Frequenz: 110Hz 
+</br> Mittenfrequenz: (108.08 + 111.92)/2 = 109.99Hz
+</br> Differenzfrequenz: 111.92 - 108.08 = 3.84Hz  
+</p>
+
+<br><h3>Aufgabe 3 - 3.1</h3>
+<p>Klangnachbildung: Wir wollen nun versuchen, selber einen interessanten Klang zu
+        kreieren. Die einzigen Anforderungen ist, dass wir dazu die für Aufgabe 4 vorgesehene
+        Taste drücken, und dass es ein monophoner Klang ist, d.h. dass nur eine Taste gedrückt
+        wird und eine Note
+        erklingt. Zunächst wählen wir die Grundwellenform (Rechteck, Sägezahn, etc.), die
+        klanglich am besten zu unserem Instrument passt. Um die Hüllkurve entsprechend
+        manipulieren zu können, brauchen wir ein ADSR-Modul („Envelope“), das wir zwischen dem
+        Ausgang GATE des MIDI-Moduls und EXP Eingängen der VCAs  einbauen. 
+        Damit versuchen wir zunächst den zeitlichen Verlauf einzustellen.
+       </p>
+
+<p><img src="./bilder/VCV_aufg3.png" width="500" height="350">
+<br><br><b>Audion Beispiele</b>
+<br><br>Öfteres Abspielen von dem Ton:
+<br><audio controls><source src="audio/Aufzeichnung1.wav" type="audio/wav"></audio>
+<br>lang gehaltener Ton:
+<br><audio controls><source src="audio/Aufzeichnung2langerTon.wav" type="audio/wav"></audio>
+<br><br> Wir haben uns entschieden einen Trompeten- Klang zu erzeugen, der eine warme und lebhafte
+Tonqualität hat. Hier ist eine detaillierte Beschreibung der verschiedenen Komponenten, die wir 
+verwendet haben: 
+<br><br><b>Oszillator (VCO):</b>
+<br>Der Oszillator ist das Herzstück des Klanges und wurde auf eine Sägezahn-Wellenform eingestellt, 
+die reich an Obertönen ist und dem Klang die gewünschte Helligkeit verleiht.
+<br><br><b>ADSR-Einstellungen:</b>
+<br><u>Attack:</u> Ein kurzer, schneller Anstieg sorgt dafür, dass der Klang schnell einsetzt, wie bei einer 
+Trompete, die sofort auf Luftdruck reagiert.
+<br><br><u>Decay:</u> Eine mittellange Abklingzeit reduziert die Lautstärke nach dem ersten Anschlag, um die 
+natürliche Dämpfung eines Blechblasinstruments zu simulieren.
+<br><br><u>Sustain:</u> Ein mäßiges Sustain-Level sorgt dafür, dass der Ton nach dem Decay-Abschnitt stabil bleibt, 
+was typisch für die kontinuierliche Luftzufuhr bei Blasinstrumenten ist.
+<br><br><u>Release:</u> Eine kurze Release-Zeit sorgt dafür, dass der Klang schnell abklingt, wenn die Taste losgelassen wird.
+<br><br><b>Filtertyp (VCF):</b>
+<br>Ein Tiefpassfilter wurde verwendet, um die höheren Frequenzen abzuschwächen und den Klang weicher zu machen. 
+Der Cutoff-Frequenzbereich wurde so eingestellt, dass er den typischen Klang einer Trompete imitiert. Ein leichter 
+Resonanzwert wurde hinzugefügt, um den Klang lebendiger zu machen.
+<br><br><b>Endgültige Struktur des Synthesizers:</b>
+<br>MIDI-CV: Dieses Modul wandelt MIDI-Signale in Steuerspannungen um, um den Oszillator anzusteuern.
+<br>VCO (Voltage-Controlled Oscillator): Erzeugt das Basissignal, eine Sägezahn-Welle, die reich an Obertönen ist.
+<br>ADSR EG (Attack, Decay, Sustain, Release Envelope Generator): Formt die Amplitude des Klanges über die Zeit.
+<br>VCA (Voltage-Controlled Amplifier): Kontrolliert die Amplitude des Audiosignals.
+>VCF (Voltage-Controlled Filter): Filtert das Audiosignal mit einem Tiefpassfilter, um den gewünschten Klang zu erzeugen.
+<br>AUDIO 8: Kümmert sich um den Audioeingang und -ausgang.
+<br>SCOPE: Visualisiert das Audiosignal zur Kontrolle und Analyse.
+<br><br>Diese Module wurden entsprechend verkabelt, um das charakteristische Trompeten-Klangbild zu erzeugen.
+
+</p>
+
+
+
+
+</body>
+</html>
