@@ -153,7 +153,7 @@
     Ins Übungsprotokoll: Sourcecode, Ergebnisse für mittlere Helligkeit und Kontrast, Ergebnisse
     Minimum/Maximum für Helligkeit und Kontrast mit dazugehörigen Histogrammen, Alle Bilder</p>
 <p>Code:<br>
-    <br><img src="./bilder/3bCode.jpeg" width="450">
+    <br><img src="./bilder/3cCode.jpeg" width="450">
     <br><br>
     <br>Kontraständerung von Y-Manmade Bild mit Faktor k:0.2 bis 10
     <br><br><img src="./bilder3c/manmade02.bmp" width="450">
@@ -165,7 +165,7 @@
     <br><br><img src="./bilder3c/manmade50.bmp" width="450">
     <br><br><img src="./bilder3c/manmade100.bmp" width="450">
 
-    <br>Kontraständerung von Y-Nature Bild mit negativen Faktor => Farben werden invertiert
+    <br>Kontraständerung von Y-Nature Bild mit negativen Faktor 
     <br><br><img src="./bilder3c/manmade_100.bmp" width="450">
 
     <br>Kontraständerung von Y-Nature Bild mit Faktor k:0.2 bis 10
@@ -178,8 +178,12 @@
     <br><br><img src="./bilder3c/nature50.bmp" width="450">
     <br><br><img src="./bilder3c/nature100.bmp" width="450">
 
-    <br>Kontraständerung von Y-Nature Bild mit negativen Faktor => Farben werden invertiert
+    <br>Kontraständerung von Y-Nature Bild mit negativen Faktor
     <br><br><img src="./bilder3c/nature_100.bmp" width="450">
+
+    Wenn k kleiner 0 ist, entstehen negative Pixelwerte, die außerhalb des 8-Bit-Bereichs liegen.<br>
+     Diese Werte werden auf 0 gesetzt, was dazu führt, dass das Bild komplett schwarz wird. <br>
+     Es gehen also alle Details verloren und das Bild ist nur noch schwarz
 
 </p>
 
