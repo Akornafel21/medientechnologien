@@ -181,9 +181,11 @@
     <br>Kontraständerung von Y-Nature Bild mit negativen Faktor
     <br><br><img src="./bilder3c/nature_100.bmp" width="450">
     <br> <br>
-    Wenn k kleiner 0 ist, entstehen negative Pixelwerte, die außerhalb des 8-Bit-Bereichs liegen.<br>
-     Diese Werte werden auf 0 gesetzt, was dazu führt, dass das Bild komplett schwarz wird. <br>
-     Es gehen also alle Details verloren und das Bild ist nur noch schwarz
+    Bei einer Kontraständerung mit k kleiner 0 werden die Pixelwerte negativ, was dazu führt, <br>
+    dass alle Pixel mit einem Helligkeitswert unter 0 auf 0 gesetzt werden. Das Bild verliert dadurch an Kontrast,<br>
+     da es sehr flach wirkt. Wenn k=10k=10 verwendet wird, wird das Bild viel heller und verliert fast alle Details.<br>
+      Bei einem k=0.2k=0.2 bleibt mehr vom ursprünglichen Bild erhalten, aber es ist deutlich dunkler und der Kontrast <br>
+      kaum noch erkennbar.
 
 </p>
 
