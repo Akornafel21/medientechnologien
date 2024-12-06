@@ -1,0 +1,122 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="format.css">
+<style type="text/css">
+        
+                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
+                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
+                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
+        
+</style>
+</head>
+
+<body>
+
+<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+         <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
+         folgenden.</p>
+</iframe>
+
+<h2>Uebung 4 Manipulation von Bildparametern, Farbsysteme</h2>
+<br><h3>Aufgabe 1</h3>
+<p><b>a. </b>RGB ist der gebräuchlichste Farbraum bei der Aufzeichnung und Darstellung von Bildern. Hier wird das
+    Lichtspektrum in seine Rot-, Grün- und Blauanteile aufgespalten. <br>Der YCbCr Farbraum hingegen besteht aus
+    der Luminanz Y (Helligkeit) und den Farbanteilen (Chrominanz) Cb und Cr. <br>Die RGB Farben eines Bildes
+    lassen sich also in den YCbCr Farbraum transformieren. <br>Für viele Anwendungen, z.B. die Bildkompression,
+    ist es günstig, Helligkeits- und Farbinformation getrennt zu verarbeiten.<br> Nenne den physiologischen Grund
+    dafür!</p>
+<p><b>Originalsbilder 1/2: </b></p>
+<td><img src="./bilder/Nature_Bytewave.bmp" width="550"></td>
+<td><img src="./bilder/Manmade_Bytewave.bmp" width="550"></td>
+
+<p>Das menschliche Auge ist empfindlicher für Helligkeitsunterschiede (Luminanz) als für Farbunterschiede (Chrominanz), da die Netzhaut mehr lichtempfindliche Stäbchen
+</br>(für Helligkeit) als farbempfindliche Zapfen besitzt. Helligkeit liefert den Großteil der Details, während Farben weniger präzise wahrgenommen werden.
+</br>Diese Eigenschaft erlaubt es, bei Anwendungen wie Bildkompression (z. B. JPEG), die Farbinformation stärker zu reduzieren, während die Helligkeitsinformationen
+</br>nahezu unverändert bleiben,um die Bildqualität zu erhalten.</p>
+
+<p><b>b. </b>Erstelle aus deinen eigenen Bildern Versionen, die nur jeweils den Rot-, Grün- und Blauanteil
+    zeigen. (Hinweis: Dazu müssen einfach die jeweils anderen Farbwerte</br>auf null gesetzt werden).</p>
+<br><b>Code:</b>
+<br><img src="./bilder/codeRGB.jpeg" width="750">
+<p>
+<p><br><b>Rot:</b></p>
+<td><img src="./bilder/natureRed.bmp" width="550"></td>
+<td><img src="./bilder/manmadeRed.bmp" width="550"></td>
+
+<p><br><b>Grün:</b></p>
+<td><img src="./bilder/natureGreen.bmp" width="550"></td>
+<td><img src="./bilder/manmadeGreen.bmp" width="550"></td>
+
+<p><br><b>Blau:</b></p>
+<td><img src="./bilder/natureBlue.bmp" width="550"></td>
+<td><img src="./bilder/manmadeBlue.bmp" width="550"></td>
+</p>
+
+<p><b>c. </b>Nun transformiere deine RGB-Bilder nach YCbCr. Lese dafür jedes Pixel ein und berechne die Helligkeit
+    Y (Luminanzformel!)</br>sowie die Chrominanzen Cb und Cr (Chrominanzformeln!) aus den RGB Werten.</p>
+
+<br><b>Code:</b>
+<br><img src="./bilder/codeC.jpeg" width="750">
+<p>
+<p><br><b>Y:</b></p>
+<td><img src="./bilder/natureY.bmp" width="550"></td>
+<td><img src="./bilder/manmadeY.bmp" width="550"></td>
+        
+<p><br><b>Cb:</b></p>
+<td><img src="./bilder/natureCb.bmp" width="550"></td>
+<td><img src="./bilder/manmadeCb.bmp" width="550"></td>
+        
+<p><br><b>Cr:</b></p>
+<td><img src="./bilder/natureCr.bmp" width="550"></td>
+<td><img src="./bilder/manmadeCr.bmp" width="550"></td>
+</p>
+
+<p><b>d. </b>Wandle zunächst zur Rekonstruktion deines Bildes die YCbCr Werte zurück in RGB.</p>
+
+<br><b>Code:</b>
+<br><img src="./bilder/codeYCbCr.jpeg" width="750">
+<p><br><b>YCbCr zu RGB:</b></p>
+<p>
+<td><img src="./bilder/natureYCbCr.bmp" width="550"></td>
+<td><img src="./bilder/manmadeYCbCr.bmp" width="550"></td>
+</p>
+
+<br><h3>Aufgabe 2 - Histogramm</h3>
+<p>Mithilfe eines Histogramms kann die Verteilung (Häufigkeit) der Helligkeiten eines Bildes dargestellt
+    werden. <br>Erstelle ein Histogramm für das monochrome Nature-Bild aus Aufgabe 1 (Y - Bild). <br>Lese dafür
+    den Helligkeitswert der Pixel ein und bestimme die Helligkeitshäufigkeiten (Anzahl gleicher Helligkeiten).
+    <br>Diese sollen in eine Textdatei geschrieben und als Histogramm dargestellt werden (z.B. in Excel, Java).
+    Ins Übungsprotokoll: Sourcecode, Histogramm des Bildes</p>  
+<p><!--Beispiel--></p>
+
+
+<br><h3>Aufgabe 3 - a</h3>
+<p>Berechne die mittlere Helligkeit des monochromen Detailbildes aus Aufgabe 1 (Y - Bild).<br> Lese dafür den
+    Helligkeitswert der Pixel ein. Die mittlere Helligkeit ist die Summe aller Helligkeitswerte geteilt durch die
+    Anzahl der Bildpunkte. <br>Berechne auch den Kontrast des Bildes, d.h. die Standardabweichung der Helligkeit.</p>
+<p><!--Beispiel--></p>
+
+<br><h3>Aufgabe 3 - b</h3>
+<p>Verändere das monochrome Bild in der Helligkeit durch Subtrahieren der Werte h=(-20, -40, -60, -80)
+    bzw. Addieren der Werte h=(20, 40, 60, 80).<br> Beachte dabei, dass ihr beim Ergebnis der Pixelwert-
+    berechnung im 8-Bit-Bereich bleibt.<br> Berechne die Histogramme des hellsten und dunkelsten Bildes.</p>
+<p><!--Beispiel--></p>
+
+<br><h3>Aufgabe 3 - c</h3>
+<p>Erhöhe bzw. verringere den Kontrast durch Multiplikation mit den Faktoren k=(0.2, 0.4, 0.8, 1.0) sowie
+    k=(1.5, 2.5, 5.0, 10.0). <br>Was würde bei einer Kontraständerung mit k größer 0 passieren (Einfach ausprobieren
+    und Bild speichern!)?<br>
+    Berechne auch hier das Histogramm des kontrastärmsten und kontrastreichsten Bildes und vergleiche mit
+    denen der Helligkeitsänderung. <br>Was haben Helligkeits- und Kontraständerung für eine Auswirkung auf das
+    Histogramm (Vergleiche auch mit dem Histogramm aus Aufgabe 2)?<br>
+    Ins Übungsprotokoll: Sourcecode, Ergebnisse für mittlere Helligkeit und Kontrast, Ergebnisse
+    Minimum/Maximum für Helligkeit und Kontrast mit dazugehörigen Histogrammen, Alle Bilder</p>
+<p><!--Beispiel--></p>
+
+
+
+
+
+</body>
+</html>
