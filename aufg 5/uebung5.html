@@ -1,0 +1,182 @@
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="format.css">
+<style type="text/css">
+        
+                 a:link {font-family:Arial;        font-size:10pt;        text-decoration:none;}
+                a:visited {font-family:Arial; font-size:10pt; text-decoration:none;}
+                a:hover {color:#FF3333; text-decoration:none; font-weight:normal; font-size:10pt;}
+        
+</style>
+</head>
+
+<body>
+
+<iframe src="oben.html" width="800" height="120" name="IFrame3" id="IFrame3" scrolling="no" frameborder="0">
+         <p>Ihr Browser kann leider keine eingebe5tteten Frames anzeigen:Sie k&ouml;nnen die eingebettete Seite &uuml;ber den
+         folgenden.</p>
+</iframe>
+
+<h2>Übung 5: Diskrete Systeme, Clipping, Echo, Filte</h2>
+<br><h3>Aufgabe 1 - Klirrfaktor</h3>
+<p><b>a. </b>Zunächst sollt ihr eure Musikdatei um die Verstärkung 3, 6 und 9dB verstärken. Dies
+    realisiert ihr durch Multiplikation der Abtastwerte mit dem linearen Verstärkungsfaktor F, den
+    ihr zunächst aus der Verstärkung in dB berechnen müsst.<br>
+    Dabei wird es bei hoher Verstärkung zwangsläufig zu einem sogenannten Clipping kommen, d.h.
+    das Produkt aus der Originalamplitude und dem Verstärkungsfaktor ist betragsmäßig größer als
+    der maximal darstellbare Amplitudenwert (bei 16 bit  -32768 bzw.  32767).<br> In diesem Fall
+    muss dafür gesorgt werden, dass der resultierende Wert auf genau -32768, bzw. 32767 gesetzt
+    wird. Clipping ist akustisch als immer stärker werdende Verzerrung des Musiksignals
+    wahrnehmbar.</p>
+
+    <p><b>Musik – Orginaldatei</b></p>
+    <audio controls><source src="audio/musik_Bytewave.wav" type="audio/wav"></audio>
+
+    <p><b>Code:</b></p>
+    <p><img src="./bilder/code_1a.jpeg" height="650"></p>
+
+    <br>
+    <p><b>Musik-Verstärkung von 3dB:</b></p>
+    <audio controls><source src="audio/musikVerstärkt_3dB.wav" type="audio/wav"></audio>
+    <p><img src="./bilder/3dB.jpeg" height="550"></p>
+    <br>
+
+    <p><b>Musik-Verstärkung von 6dB:</b></p>
+    <audio controls><source src="audio/musikVerstärkt_6dB.wav" type="audio/wav"></audio>
+    <p><img src="./bilder/6dB.jpeg" height="550"></p>
+    <br>
+
+
+    <p><b>Musik-Verstärkung von 9dB:</b></p>
+    <audio controls><source src="audio/musikVerstärkt_9dB.wav" type="audio/wav"></audio>
+    <p><img src="./bilder/9dB.jpeg" height="550"></p>
+    <br>
+
+
+    <p><b>Musik-Verstärkung von 12dB:</b></p>
+    <audio controls><source src="audio/musikVerstärkt_12dB.wav" type="audio/wav"></audio>
+    <p><img src="./bilder/12dB.jpeg" height="550"></p>
+    <br>
+
+
+
+    <p><b>Musik-Verstärkung von 15dB:</b></p>
+    <audio controls><source src="audio/musikVerstärkt_15dB.wav" type="audio/wav"></audio>
+    <p><img src="./bilder/15dB.jpeg" height="550"></p>
+    <br>
+
+
+
+    <p><b>Musik-Verstärkung von 18dB:</b></p>
+    <audio controls><source src="audio/musikVerstärkt_18dB.wav" type="audio/wav"></audio>
+    <p><img src="./bilder/18dB.jpeg" height="550"></p>
+    <br>
+
+
+
+    <p><b>Musik-Verstärkung von 21dB:</b></p>
+    <audio controls><source src="audio/musikVerstärkt_21dB.wav" type="audio/wav"></audio>
+    <p><img src="./bilder/21dB.jpeg" height="550"></p>
+    <br>
+
+    <p><b>Verstärkungsfaktoren:</b></p>
+    <p><img src="./bilder/verstärkung.jpeg" height="200"></p>
+
+
+
+    <p><b>b. </b>Bei welcher Verstärkung wird eine Verzerrung wahrnehmbar?</p>
+    
+     <p> <!-- Lösung--></p>
+
+
+    <p><b>c. </b>Ihr sollt nun die 1kHz-Sinusschwingung um 6, 9 und 12 dB verstärken und den
+        resultierenden Klirrfaktor k berechnen. <br>Der Klirrfaktor lässt sich aus dem Frequenzspektrum
+        berechnen (PRAAT: Read File..., ToSpectrum..., Edit) alle sichtbaren Obertöne für die
+        Berechnung berücksichtigen!.<br>
+        Beachte: Die dB-Angaben der Amplituden aus PRAAT müssen vor dem Einsetzen in die
+        Klirrfaktor-Formel in lineare Angaben, d.h. die An , umgerechnet werden.<br>
+        Ins Übungsprotokoll: Sourcecode, wavs Musik und Sinus, Ausschnitte vom Clipping (z.B. aus
+        Audacity oder Praat), Frequenzspektrum des Sinus (PRAAT), Berechnungen Klirrfaktor k</p>
+     <p> <!-- Lösung--></p>
+
+
+     <br><h3>Aufgabe 2 - Echo</h3>
+
+    <p><b>a. </b>Implementiert ein Echo mit einer Verzögerung von 10, 100 und 200ms und dem
+    Verstärkungsfaktor a = 0.6. Um wie viele Abtastwerte N müssen wir verzögern, wenn wir mit
+    einer Abtastrate von 44.1 kHz arbeiten?</p>
+
+    <p>
+        Für eine Abtastrate von 44.1 kHz und die angegebenen Verzögerungszeiten berechnen sich
+        die Verzögerungswerte wie folgt:
+        <br><br>bei 10 ms: N = 441
+        <br>bei 100 ms: N = 4410
+        <br>bei 200 ms: N = 8820
+        <br><br>Berechnung:
+        <br>N(10ms) = 00.1 * 44100 = 441
+        <br>N(100ms) = 0.1 * 44100 = 4410
+        <br>N(200ms) = 0.2 * 44100 = 8820
+    </p>
+
+
+    <p><b>b. </b>Wendet das Echo auf eure Sprach- und Musiksignal an. Es kann sein, dass die 10ms nur bei
+        einem recht trockenen Soundfile wie der Sprachaufnahme hörbar werden.<br>
+        Hinweis: Bei Stereodateien muss berücksichtigt werden, dass linker und rechter Kanal getrennt
+        verzögert werden müssen. Die Samples für links und rechts liegen im Samplearray jeweils
+        hintereinander.<br>
+        Ins Übungsprotokoll: Sourcecode, wavs Sprache und Musik</p>
+    
+        <p>
+            Code:
+            <br><img src="./bilder/EchoCode_Part1.png" height="350">
+            <br><img src="./bilder/EchoCode_Part2.png" height="350">
+            <br><br>Audio Files:<br><br>
+            Musik Echo 10ms:<br>
+            <audio controls><source src="audio/Musik_Echo_10ms.wav" type="audio/wav"></audio>
+            <br>Musik Echo 100ms:
+            <br><audio controls><source src="audio/Musik_Echo_100ms.wav" type="audio/wav"></audio>
+            <br>Musik Echo 200ms:
+            <br><audio controls><source src="audio/Musik_Echo_200ms.wav" type="audio/wav"></audio>
+            <br><br>Sprache Echo 10ms:
+            <br><audio controls><source src="audio/Sprache_Echo_10ms.wav" type="audio/wav"></audio>
+            <br>Sprache Echo 100ms:
+            <br><audio controls><source src="audio/Sprache_Echo_100ms.wav" type="audio/wav"></audio>
+            <br>Sprache 200ms:
+            <br><audio controls><source src="audio/Sprache_Echo_200ms.wav" type="audio/wav"></audio>
+        </p>
+
+
+        <br><h3>Aufgabe 3 - Einfaches Filter</h3>
+
+        <p><b>a. </b>Ein sehr einfaches Filter kann man z.B. mit der Zuordnungsvorschrift
+            y(k) = 0.5 * x(k) + 0.45 * x(k-1)<br>
+            realisieren. Programmiert das Filter und vergleicht die Musikdatei vor und nach der Filterung.
+            Tut dasselbe mit der Zuordnungsvorschrift
+            y(k) = 0.5 * x(k) - 0.45 * x(k-1)</p>
+
+            <p>  Originalaudio:
+                <br>  <audio controls><source src="audio/musik_Bytewave.wav" type="audio/wav"></audio><br> <br> 
+                
+                Code:</br><img src="bilder/3acode.jpg" height="250" alt="Bild kann nicht geladen werden.">
+    
+                <br>  <br>  <br>  <br> Tiefpass: y(k) = 0.5 * x(k) + 0.45 * x(k-1)
+                <br><img src="bilder/3a_tiefpass.jpg" height="450" alt="Bild kann nicht geladen werden.">
+                <br> <br> <audio controls><source src="audio/musik_Filter1.wav" type="audio/wav"></audio>
+            
+                <br>  <br>  <br>  <br> Hochpass:  y(k) = 0.5 * x(k) - 0.45 * x(k-1)
+                <br><img src="bilder/3a_hochpass.jpg" height="450" alt="Bild kann nicht geladen werden.">
+                <br> <br> <audio controls><source src="audio/musik_Filter2.wav" type="audio/wav"></audio></p>
+
+        <p><b>b. </b>Zum Testen der Filter verwendet Weißes Rauschen, das alle Frequenzen enthält. Wenn wir
+            nun den Frequenzverlauf des Originalaudios mit dem gefilterten vergleichen, muss sich ein
+            Verlauf wie in der unteren Darstellung ergeben. Um was für eine Art Filter handelt es sich
+            jeweils? <br>
+            Ins Übungsprotokoll: Sourcecode, wavs Musik und Rauschen, Spektrum PRAAT</p>
+        
+            <p> <!-- Lösung--></p>
+
+
+
+</body>
+</html>

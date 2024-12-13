@@ -88,31 +88,171 @@
     den Helligkeitswert der Pixel ein und bestimme die Helligkeitshäufigkeiten (Anzahl gleicher Helligkeiten).
     <br>Diese sollen in eine Textdatei geschrieben und als Histogramm dargestellt werden (z.B. in Excel, Java).
     Ins Übungsprotokoll: Sourcecode, Histogramm des Bildes</p>  
-<p><!--Beispiel--></p>
+<p><b>Nature Histogramm:</b><br>
+    <br> <a href="./histogram/natureY_histogram1.txt" target="_blank">Textdatei, mit Helligkeitsverteilung für Nature</a>
+    <br><img src="./bilder/natureExcel.jpeg" width="750">
+    <br><br><b>ManMade Histogramm:</b><br>
+    <br> <a href="./histogram/manmadeY_histogram1.txt" target="_blank">Textdatei, mit Helligkeitsverteilung für ManMade</a>
+    <br><img src="./bilder/manmadeExcel.jpeg" width="750"></p>
 
 
 <br><h3>Aufgabe 3 - a</h3>
 <p>Berechne die mittlere Helligkeit des monochromen Detailbildes aus Aufgabe 1 (Y - Bild).<br> Lese dafür den
     Helligkeitswert der Pixel ein. Die mittlere Helligkeit ist die Summe aller Helligkeitswerte geteilt durch die
     Anzahl der Bildpunkte. <br>Berechne auch den Kontrast des Bildes, d.h. die Standardabweichung der Helligkeit.</p>
-<p><!--Beispiel--></p>
+
+<br><b>Code für mittlere Helligkeit und Kontrast:</b>
+<br><img src="./bilder/KontrastCode.jpeg" width="750">
+<p>
+<br><b>NatureY Bild:</b>
+<br><img src="./bilder/natureHelligkeit.jpeg" width="450">
+<br>
+<br><b>ManmadeY Bild:</b>
+<br><img src="./bilder/manmadeHelligkeit.jpeg" width="450">
+</p>
 
 <br><h3>Aufgabe 3 - b</h3>
 <p>Verändere das monochrome Bild in der Helligkeit durch Subtrahieren der Werte h=(-20, -40, -60, -80)
     bzw. Addieren der Werte h=(20, 40, 60, 80).<br> Beachte dabei, dass ihr beim Ergebnis der Pixelwert-
     berechnung im 8-Bit-Bereich bleibt.<br> Berechne die Histogramme des hellsten und dunkelsten Bildes.</p>
-<p><!--Beispiel--></p>
+<p><b>Code:</b><br>
+    <br><img src="./bilder/3bCode.jpeg" width="750">
+
+    <br><br><br><br>
+    <br><b>Helligkeitsänderung von Y-Nature Bild mit Faktor -80 bis 80:</b>
+    <br><br><img src="./bilder/nature_80.bmp" width="650">
+    <br><br><img src="./bilder/nature_60.bmp" width="650">
+    <br><br><img src="./bilder/nature_40.bmp" width="650">
+    <br><br><img src="./bilder/nature_20.bmp" width="650">
+    <br><br><img src="./bilder/nature20.bmp" width="650">
+    <br><br><img src="./bilder/nature40.bmp" width="650">
+    <br><br><img src="./bilder/nature60.bmp" width="650">
+    <br><br><img src="./bilder/nature80.bmp" width="650">
+
+    <br><br>
+    <br><b>Helligkeitsänderung von Y-Manmade Bild mit Faktor -80 bis 80:</b>
+    <br><br><img src="./bilder/manmade_80.bmp" width="650">
+    <br><br><img src="./bilder/manmade_60.bmp" width="650">
+    <br><br><img src="./bilder/manmade_40.bmp" width="650">
+    <br><br><img src="./bilder/manmade_20.bmp" width="650">
+    <br><br><img src="./bilder/manmade20.bmp" width="650">
+    <br><br><img src="./bilder/manmade40.bmp" width="650">
+    <br><br><img src="./bilder/manmade60.bmp" width="650">
+    <br><br><img src="./bilder/manmade80.bmp" width="650">
+
+
+
+
+</p>
 
 <br><h3>Aufgabe 3 - c</h3>
 <p>Erhöhe bzw. verringere den Kontrast durch Multiplikation mit den Faktoren k=(0.2, 0.4, 0.8, 1.0) sowie
     k=(1.5, 2.5, 5.0, 10.0). <br>Was würde bei einer Kontraständerung mit k größer 0 passieren (Einfach ausprobieren
     und Bild speichern!)?<br>
-    Berechne auch hier das Histogramm des kontrastärmsten und kontrastreichsten Bildes und vergleiche mit
-    denen der Helligkeitsänderung. <br>Was haben Helligkeits- und Kontraständerung für eine Auswirkung auf das
-    Histogramm (Vergleiche auch mit dem Histogramm aus Aufgabe 2)?<br>
-    Ins Übungsprotokoll: Sourcecode, Ergebnisse für mittlere Helligkeit und Kontrast, Ergebnisse
-    Minimum/Maximum für Helligkeit und Kontrast mit dazugehörigen Histogrammen, Alle Bilder</p>
-<p><!--Beispiel--></p>
+    <br>
+</p>
+<p><b>Code:</b><br>
+    <br><img src="./bilder3c/code3c.jpeg" width="750">
+    <br><br>
+    <br><br><b>Kontraständerung von Y-Manmade Bild mit Faktor k: 0.2 bis 10:</b>
+    <br><br><img src="./bilder3c/manmade02.bmp" width="650">
+    <br><br><img src="./bilder3c/manmade08.bmp" width="650">
+    <br><br><img src="./bilder3c/manmade10.bmp" width="650">
+    <br><br><img src="./bilder3c/manmade15.bmp" width="650">
+    <br><br><img src="./bilder3c/manmade25.bmp" width="650">
+    <br><br><img src="./bilder3c/manmade50.bmp" width="650">
+    <br><br><img src="./bilder3c/manmade100.bmp" width="650">    
+    
+<p>
+    <p><br><b>Kontraständerung von Y-Manmade Bild mit negativen Faktor:</b></p>
+    <br><img src="./bilder3c/manmade_05.bmp" width="650">
+    <br><br><br>
+
+   
+    
+
+    <br><br>
+    <br><br><b>Kontraständerung von Y-Nature Bild mit Faktor k: 0.2 bis 10:</b>
+    <br><br><img src="./bilder3c/nature02.bmp" width="650">
+    <br><br><img src="./bilder3c/nature08.bmp" width="650">
+    <br><br><img src="./bilder3c/nature10.bmp" width="650">
+    <br><br><img src="./bilder3c/nature15.bmp" width="650">
+    <br><br><img src="./bilder3c/nature25.bmp" width="650">
+    <br><br><img src="./bilder3c/nature50.bmp" width="650">
+    <br><br><img src="./bilder3c/nature100.bmp" width="650">
+</p>
+
+    <br><b>Kontraständerung von Y-Nature Bild mit negativen Faktor:</b>
+    <br><br><img src="./bilder3c/nature_05.bmp" width="650">
+    <br> <br>
+
+    <p>Berechne auch hier das Histogramm des kontrastärmsten und kontrastreichsten Bildes und vergleiche mit
+        denen der Helligkeitsänderung. <br>Was haben Helligkeits- und Kontraständerung für eine Auswirkung auf das
+        Histogramm (Vergleiche auch mit dem Histogramm aus Aufgabe 2)?</p>
+    <br><b>Kontrastärmstes Manmade Bild mit dazugehörigen Histogramm:</b>
+    <br>
+    <br> <a href="./histogram/manmade02_histogram2.txt" target="_blank">Textdatei, mit Helligkeitsverteilung für Manmade</a>
+    <br><br><img src="./bilder3c/manmade02.bmp" width="650">
+    <br><br><img src="./histogram/manmadeK02.jpeg" width="650">
+
+    <br><br>
+    <br><b>Kontrastreichsten Manmade Bild mit dazugehörigen Histogramm:</b>
+    <br> <a href="./histogram/manmade100_histogram2.txt" target="_blank">Textdatei, mit Helligkeitsverteilung für Manmade</a>
+    <br><br><img src="./bilder3c/manmade100.bmp" width="650">
+    <br><br><img src="./histogram/manmadeK100.jpeg" width="650">
+    <br><br><br><br>
+    Kontrastärmstes Nature Bild mit dazugehörigen Histogramm:
+    <br> <a href="./histogram/nature02_histogram2.txt" target="_blank">Textdatei, mit Helligkeitsverteilung für Nature</a>
+    <br><br><img src="./bilder3c/nature02.bmp" width="650">
+    <br><br><img src="./histogram/natureK02.jpeg" width="650">
+
+
+    <br><br>
+    kontrastreichsten Nature Bild mit dazugehörigen Histogramm:
+    <br> <a href="./histogram/nature100_histogram2.txt" target="_blank">Textdatei, mit Helligkeitsverteilung für Nature</a>
+    <br><br><img src="./bilder3c/nature100.bmp" width="650">
+    <br><br><img src="./histogram/natureK100.jpeg" width="650">
+
+
+
+    <br><br><br><br>
+    Bei einer Kontraständerung mit k kleiner 0 werden die Pixelwerte negativ, was dazu führt, <br>
+    dass alle Pixel mit einem Helligkeitswert unter 0 auf 0 gesetzt werden. Das Bild verliert dadurch an Kontrast,<br>
+     da es sehr flach wirkt. Wenn k=10 verwendet wird, wird das Bild viel heller und verliert fast alle Details.<br>
+      Bei einem k=0.2 bleibt mehr vom ursprünglichen Bild erhalten, aber es ist deutlich dunkler und der Kontrast <br>
+      kaum noch erkennbar.
+
+    <p><b>Vergleich: Histogramme monochromes Bild, Helligkeit und Kontrast:</b></p>
+    <br>Nature Bild
+    <p><td><img src="./bilder/natureExcel.jpeg" width="550"></td>
+    <td><img src="./histogram/natureK02.jpeg" width="550"></td>
+    <td><img src="./histogram/natureK100.jpeg" width="550"></td>
+    </p>
+
+
+
+    <br>Manmade Bild
+    <p><td><img src="./bilder/manmadeExcel.jpeg" width="550"></td>
+    <td><img src="./histogram/manmadeK02.jpeg" width="550"></td>
+    <td><img src="./histogram/manmadeK100.jpeg" width="550"></td>
+    </p>
+
+
+    <p><b>Interpretation der Histogramme:</b>
+        <br>
+       <br> Histogramm des Originals:
+        <br>1. Breite Verteilung über viele Helligkeitswerte.
+        <br>2. Zeigt ein Bild mit hohem Detailreichtum in den Graustufen.
+        <br>
+        <br>Kontrastsärmstes Bild:
+        <br>1. Die Helligkeitswerte konzentrieren sich in einem schmalen Bereich.
+        <br>2. Kontrastarm, daher wirken viele Bereiche ähnlich hell.
+        <br>
+        <br>Kontrastreichstes Bild:
+        <br>1. Sehr enge Peaks am unteren und oberen Ende der Skala.
+        <br>2. Hoher Kontrast, Bild erscheint sehr scharf mit klaren Hell-Dunkel-Unterschieden.</p>
+
+</p>
 
 
 
