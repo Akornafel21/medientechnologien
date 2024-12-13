@@ -123,7 +123,17 @@
     Verstärkungsfaktor a = 0.6. Um wie viele Abtastwerte N müssen wir verzögern, wenn wir mit
     einer Abtastrate von 44.1 kHz arbeiten?</p>
 
-    <p> <!-- Lösung--></p>
+    <p>
+        Für eine Abtastrate von 44.1 kHz und die angegebenen Verzögerungszeiten berechnen sich
+        die Verzögerungswerte wie folgt:
+        <br><br>bei 10 ms: N = 441
+        <br>bei 100 ms: N = 4410
+        <br>bei 200 ms: N = 8820
+        <br><br>Berechnung:
+        <br>N(10ms) = 00.1 * 44100 = 441
+        <br>N(100ms) = 0.1 * 44100 = 4410
+        <br>N(200ms) = 0.2 * 44100 = 8820
+    </p>
 
 
     <p><b>b. </b>Wendet das Echo auf eure Sprach- und Musiksignal an. Es kann sein, dass die 10ms nur bei
@@ -133,7 +143,24 @@
         hintereinander.<br>
         Ins Übungsprotokoll: Sourcecode, wavs Sprache und Musik</p>
     
-        <p> <!-- Lösung--></p>
+        <p>
+            Code:
+            <br><img src="./bilder/EchoCode_Part1.png" height="350">
+            <br><img src="./bilder/EchoCode_Part2.png" height="350">
+            <br><br>Audio Files:<br><br>
+            Musik Echo 10ms:<br>
+            <audio controls><source src="audio/Musik_Echo_10ms.wav" type="audio/wav"></audio>
+            <br>Musik Echo 100ms:
+            <br><audio controls><source src="audio/Musik_Echo_100ms.wav" type="audio/wav"></audio>
+            <br>Musik Echo 200ms:
+            <br><audio controls><source src="audio/Musik_Echo_200ms.wav" type="audio/wav"></audio>
+            <br><br>Sprache Echo 10ms:
+            <br><audio controls><source src="audio/Sprache_Echo_10ms.wav" type="audio/wav"></audio>
+            <br>Sprache Echo 100ms:
+            <br><audio controls><source src="audio/Sprache_Echo_100ms.wav" type="audio/wav"></audio>
+            <br>Sprache 200ms:
+            <br><audio controls><source src="audio/Sprache_Echo_200ms.wav" type="audio/wav"></audio>
+        </p>
 
 
         <br><h3>Aufgabe 3 - Einfaches Filter</h3>
@@ -162,8 +189,27 @@
             Verlauf wie in der unteren Darstellung ergeben. Um was für eine Art Filter handelt es sich
             jeweils? <br>
             Ins Übungsprotokoll: Sourcecode, wavs Musik und Rauschen, Spektrum PRAAT</p>
+
+            
         
-            <p> <!-- Lösung--></p>
+            <p> Tiefpassfilter (TP): Lässt tiefe Frequenzen passieren und dämpft hohe Frequenzen. Es hat eine niedrigere Grenzfrequenz<br>
+                Hochpassfilter (HP): Lässt hohe Frequenzen passieren und dämpft tiefe Frequenzen. Es hat eine höhere Grenzfrequenz
+                <br> <br> <br>
+                ByteWave Originaldatei mit weißes Rauschen
+                 <br><img src="bilder/3b_original.jpg" height="450" alt="Bild kann nicht geladen werden.">
+                <br> <br> <audio controls><source src="audio/musik_withNoise_Original.wav" type="audio/wav"></audio>
+                <br> <br><br> <br>
+                ByteWave Tiefpass mit weißes Rauschen
+                 <br><img src="bilder/3b_Filter1.jpg" height="450" alt="Bild kann nicht geladen werden.">
+                <br> <br> <audio controls><source src="audio/musik_withNoise_Filter1_.wav" type="audio/wav"></audio>
+
+                <br> <br><br> <br>
+                ByteWave Hochpass mit weißes Rauschen
+                 <br><img src="bilder/3b_Filter2.jpg" height="450" alt="Bild kann nicht geladen werden.">
+                <br> <br> <audio controls><source src="audio/musik_withNoise_Filter2_.wav" type="audio/wav"></audio>
+                <br> <br>
+                
+            </p>
 
 
 
